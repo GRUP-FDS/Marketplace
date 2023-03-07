@@ -1,7 +1,7 @@
 # CarTradeo
 
 ## Produto
-Lorem ipsum, dolor sit amet consectetur adipisicing elit. Unde illo inventore atque placeat reprehenderit hic, nisi aperiam nihil consequuntur! Totam vel harum sequi facere esse autem, debitis recusandae. Consectetur, vitae.
+O CarTradeo é uma plataforma web de marketaplace, na qual está em desenvolvimento para alcançar seu objetivo de facilitar o encontro entre diferentes vendedores e interessados na compra de carros.
 
 ## Equipe
 
