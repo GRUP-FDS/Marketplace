@@ -1,4 +1,10 @@
 # CarTradeo
+## Figma
+<p>Você pode ver o protótipo de baixa clicando <a href="https://www.figma.com/file/jvqSMSIrjMxfqVUOSmbXqs/CarTradeo-(Copy)?node-id=0%3A1&t=hzanEqdFZqAIZIWk-1">aqui</a>.</p>
+
+## JIRA
+<p>Você pode ver toda nossa organização clicando <a href="https://jiraprojectsccpo.atlassian.net/jira/software/projects/PDF/boards/1/roadmap">aqui</a>.</p>
+
 
 ## Produto
 O CarTradeo é uma plataforma web de marketaplace, na qual está em desenvolvimento para alcançar seu objetivo de facilitar o encontro entre diferentes vendedores e interessados na compra de carros.
