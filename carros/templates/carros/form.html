@@ -1,0 +1,29 @@
+{% extends 'core/base.html' %}
+
+{% block title %}{{ title }}{% endblock title %}
+
+{% block content %}
+
+<div class="px-4">
+  <form method="POST" action="." class="max-w-[600px] my-[60px] mx-auto p-6 bg-white rounded-lg" enctype='multipart/form-data'>
+    <h1 class="text-2xl text-black text-center">Criar um anúncio</h1>
+    {% csrf_token %}
+  
+    <div class="flex flex-col gap-4">
+      {{ form.as_p }}
+    </div>
+  
+    {% if form.errors %}
+      {% for field in form %}
+        {% for error in field.errors %}
+          <div class="mb-5 p-4 rounded-xl bg-red-300 text-white">
+            <p>{{ error|escape }}</p>
+          </div>
+        {% endfor %}
+      {% endfor %}
+    {% endif %}
+  
+    <button class="w-full text-base text-white mt-4 bg-sky-500 hover:bg-sky-600 transition-colors px-4 py-2 rounded-lg">Criar produto</button>
+  </form>
+</div>
+{% endblock %}

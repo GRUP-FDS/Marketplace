@@ -9,11 +9,10 @@
 
   <title>{% block title %}{% endblock %} | CarTradeo</title>
 </head>
-<body>
-  <nav class="flex items-center justify-between p-6 bg-slate-700">
-    <div>
-      <a href="/" class="text-xl text-white">CarTradeo</a>
-    </div>
+<body class="bg-[#C1C1C1]">
+  <nav class="flex items-center justify-between p-6 bg-white">
+    <a href="/" class="text-xl text-black">CarTradeo</a>
+    <a href="/cars/new" class="text-base text-white bg-sky-500 hover:bg-sky-600 transition-colors px-4 py-2 rounded-lg">Criar anúncio</a>
   </nav>
 
   {% block content %}
