@@ -1,5 +1,6 @@
 from django.shortcuts import render, redirect
 from .forms import NewCarForm
+from carros.models import Car
 
 # Create your views here.
 def new(request):
@@ -29,7 +30,10 @@ def car_list(request):
     return render(request, template_name, context)
 
 def plp(request):
-   return render(request, 'carros/paginadelistagem.html')
+   cars = Car.objects.all()
+   return render(request, 'carros/paginadelistagem.html',{
+      'cars' : cars,
+   })
 
 def pdp(request):
    return render(request, 'carros/description.html', {
