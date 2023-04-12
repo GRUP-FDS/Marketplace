@@ -24,16 +24,19 @@ def car_list(request):
     template_name = 'produto_list.html'
     objects = Car.objects.all()
     search = request.GET.get('search')
+    print({'search': search})
     if search:
         objects = objects.filter(produto__icontains=search)
     context = {'object_list': objects}
     return render(request, template_name, context)
 
 def plp(request):
-   cars = Car.objects.all()
-   return render(request, 'carros/paginadelistagem.html',{
-      'cars' : cars,
-   })
+    cars = Car.objects.all()
+    search = request.GET.get('search')
+    
+    return render(request, 'carros/paginadelistagem.html',{
+        'cars' : cars,
+    })
 
 def pdp(request):
    return render(request, 'carros/description.html', {
