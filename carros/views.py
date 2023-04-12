@@ -19,8 +19,6 @@ def new(request):
     'title': 'Novo Anúncio'
   })
 
-
-
 def car_list(request):
     template_name = 'produto_list.html'
     objects = Car.objects.all()
@@ -30,5 +28,10 @@ def car_list(request):
     context = {'object_list': objects}
     return render(request, template_name, context)
 
+def plp(request):
+   return render(request, 'carros/paginadelistagem.html')
+
 def pdp(request):
-   return render(request, 'carros/description.html') 
+   return render(request, 'carros/description.html', {
+   }) 
+
