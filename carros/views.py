@@ -29,3 +29,6 @@ def car_list(request):
         objects = objects.filter(produto__icontains=search)
     context = {'object_list': objects}
     return render(request, template_name, context)
+
+def pdp(request):
+   return render(request, 'carros/description.html') 
