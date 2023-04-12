@@ -18,3 +18,14 @@ def new(request):
     'form': form,
     'title': 'Novo Anúncio'
   })
+
+
+
+def car_list(request):
+    template_name = 'produto_list.html'
+    objects = Car.objects.all()
+    search = request.GET.get('search')
+    if search:
+        objects = objects.filter(produto__icontains=search)
+    context = {'object_list': objects}
+    return render(request, template_name, context)
