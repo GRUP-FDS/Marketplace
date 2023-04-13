@@ -28,15 +28,14 @@ def car_list(request):
     return render(request, 'carros/description.html', context)
 
 
-
-
 def plp(request):
-    cars = Car.objects.all()
     search = request.GET.get('search')
-    
-    return render(request, 'carros/paginadelistagem.html',{
-        'cars' : cars,
-    })
+    if search:
+        cars = Car.objects.filter(car_model__icontains=search)
+    else:
+        cars = Car.objects.all()
+    return render(request, 'carros/paginadelistagem.html', {'cars': cars})
+
 
 def pdp(request):
    return render(request, 'carros/description.html', {
