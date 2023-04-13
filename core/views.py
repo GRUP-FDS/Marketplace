@@ -9,7 +9,7 @@ def home(request):
   if request.method == 'POST':
     search = request.POST.get('search')
 
-    return redirect(reverse('plp') + '?search=' + search)
+    return redirect(reverse('carros:plp') + '?search=' + search)
   else:
     return render(request, 'core/home.html')
 
