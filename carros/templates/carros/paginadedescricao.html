@@ -2,7 +2,7 @@
 {% extends 'core/base.html' %}
 
 {% block title %}{{ title }}{% endblock title %}
-
+\\ cadastrar o title na view
 {% block content %}
 
 <div class=" grid grid-cols-5 gap-6">
@@ -10,4 +10,16 @@
       <img src=" {{ car.image.url}}" class="rounded-xl">
   </div>
 
+  <div class=" col-span-2 p-6 bg-gray-100 rounded-xl">
+    <h1 class="mb-6 text-3xl"> {{ car.car_model }}</h1>
+
+    <p class="text-gray-500" <strong> Preço: </strong> {{car.price}} </p>
+    <p class="text-gray-500" <strong> Marca: </strong> {{car.brand}} </p>
+    <p class="text-gray-500" <strong> Ano: </strong> {{car.year}} </p>
+    <p class="text-gray-500" <strong> Cor: </strong> {{car.color}} </p>
+    <p class="text-gray-500" <strong> Tipo: </strong> {{car.type}} </p>
+    <p class="text-gray-500" <strong> Descrição: </strong> {{car.Description}} </p>
+    
+
+  </div>
 {% endblock %}
