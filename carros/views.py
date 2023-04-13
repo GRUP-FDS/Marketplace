@@ -20,13 +20,15 @@ def new(request):
     'title': 'Novo Anúncio'
   })
 
+
 def car_list(request):
     search = request.GET.get('search')
-    ##objects = Car.objects.filter(search)
-    print(search)
-    ##context = {'carros': objects}
-    ##print(context)
-    return render(request, 'carros/description.html')
+    objects = Car.objects.filter(car_model__icontains=search)
+    context = {'carros': objects}
+    return render(request, 'carros/description.html', context)
+
+
+
 
 def plp(request):
     cars = Car.objects.all()
