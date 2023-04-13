@@ -19,13 +19,9 @@
       <input type="password" name="password" class="w-full mt-2 px-4 py-2 rounded-xl border border-2 border-gray-400">
     </div>
 
-    {% if form.errors %}
-      {% for field in form %}
-        {% for error in field.errors %}
-          <div class="mb-5 p-4 rounded-xl bg-red-300 text-white">
-            <p>{{ error|escape }}</p>
-          </div>
-        {% endfor %}
+    {% if form.non_field_errors %}
+      {% for error in form.non_field_errors %}
+          <p class="text-red-400">{{ error }}</p>
       {% endfor %}
     {% endif %}
   
