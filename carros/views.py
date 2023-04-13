@@ -1,4 +1,4 @@
-from django.shortcuts import render, redirect
+from django.shortcuts import render, redirect, get_object_or_404
 from .forms import NewCarForm
 from carros.models import Car
 
@@ -35,7 +35,9 @@ def plp(request):
       'cars' : cars,
    })
 
-def pdp(request):
-   return render(request, 'carros/description.html', {
+def pdp(request, pk):
+   car = get_object_or_404(Car, pk=pk)
+   return render(request, 'carros/paginadedescricao.html', {
+      'car': car
    }) 
 
