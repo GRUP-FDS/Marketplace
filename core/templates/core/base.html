@@ -9,32 +9,26 @@
 
   <title>{% block title %}{% endblock %} | CarTradeo</title>
 </head>
-<body class="bg-[#C1C1C1]">
-  <nav class="flex items-center justify-between p-6 bg-white">
-    <a href="/" class="text-xl text-black">CarTradeo</a>
-    {% if request.user.is_authenticated %}
-    <div class="flex items-center gap-2">
-      <a href="/logout/" class="text-base text-sky-500 border border-1 border-sky-600 bg-white hover:bg-sky-600 hover:text-white transition-colors px-4 py-2 rounded-lg">Sair</a>
-      <a href="/cars/new/" class="text-base text-white bg-sky-500 hover:bg-sky-600 transition-colors px-4 py-2 rounded-lg">Criar anúncio</a>
-    </div>
-    {% else %}
-      <a href="/login/" class="text-base text-white bg-sky-500 hover:bg-sky-600 transition-colors px-4 py-2 rounded-lg">Login</a>
-    {% endif %}
-  </nav>
+<body class="bg-[#ECEDF2]">
+  <header class="bg-white">
+    <nav class="flex items-center justify-between py-4 px-6 max-w-7xl mx-auto">
+      <a href="/" class="text-xl text-black">CarTradeo</a>
+      {% if request.user.is_authenticated %}
+      <div class="flex items-center gap-2">
+        <a href="/logout/" class="text-base text-sky-500 border border-1 border-sky-600 bg-white hover:bg-sky-500 hover:text-white transition-colors px-4 py-2 rounded-lg">Sair</a>
+        <a href="/cars/new/" class="text-base text-white border border-1 border-sky-500 bg-sky-500 hover:bg-sky-600 transition-colors px-4 py-2 rounded-lg">Criar anúncio</a>
+      </div>
+      {% else %}
+        <a href="/login/" class="text-base text-white bg-sky-500 hover:bg-sky-600 transition-colors px-4 py-2 rounded-lg">Login</a>
+      {% endif %}
+    </nav>
+  </header>
 
   {% block content %}
   {% endblock %}
 
   {% block scripts %}
   {% endblock %}
-  <footer class="py-6 px-6 flex justify-between bg-white">
-    <div class="w-2/3 pr-10">
-      <h3 class="ab-5 font-semibold font-style italic text-black-400"> CarTradeo </h3>
-    </div>  
-    <div class="w-3/3">
-      <a href="" class="text-base text-gray-300 bg-gray-300 px-4 py-2 rounded-lg"> _______________ </a>
-    </div>
-  </footer>
 </body>
 
 

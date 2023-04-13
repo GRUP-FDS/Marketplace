@@ -20,20 +20,22 @@ def new(request):
     'title': 'Novo Anúncio'
   })
 
+
 def car_list(request):
-    template_name = 'produto_list.html'
-    objects = Car.objects.all()
     search = request.GET.get('search')
-    if search:
-        objects = objects.filter(produto__icontains=search)
-    context = {'object_list': objects}
-    return render(request, template_name, context)
+    objects = Car.objects.filter(car_model__icontains=search)
+    context = {'carros': objects}
+    return render(request, 'carros/description.html', context)
+
 
 def plp(request):
-   cars = Car.objects.all()
-   return render(request, 'carros/paginadelistagem.html',{
-      'cars' : cars,
-   })
+    search = request.GET.get('search')
+    if search:
+        cars = Car.objects.filter(car_model__icontains=search)
+    else:
+        cars = Car.objects.all()
+    return render(request, 'carros/paginadelistagem.html', {'cars': cars})
+
 
 def pdp(request, pk):
    car = get_object_or_404(Car, pk=pk)

@@ -3,9 +3,16 @@
 {% block title %}Início{% endblock %}
 
 {% block content %}
-<div class="bg-white">
-  <div class="mx-auto max-w-2xl px-4 py-16 sm:px-6 sm:py-24 lg:max-w-7xl lg:px-8">
-    <h2 class="sr-only">Products</h2>
+<div class="bg-sky-500 h-[240px] w-full flex justify-center items-end">
+  <form method="POST" action="." class="bg-white h-[80px] mb-[-20px] w-full max-w-3xl rounded-lg flex items-center gap-4 p-4">
+    {% csrf_token %}
+    <input type="text" name="search" id="search" placeholder="Procure por uma marca" class="flex-1 h-full px-4 py-2 rounded-xl border border-2 border-gray-400">
+    <button type="submit" href="#" class="text-lg text-white bg-sky-500 hover:bg-sky-600 transition-colors px-4 py-3 rounded-lg">Pesquisar</button>
+  </form>
+</div>
+<div class="my-16">
+  <div class="mx-auto px-6 max-w-7xl">
+    <h2 class="text-3xl mb-4">Produtos</h2>
 
     <div class="grid grid-cols-1 gap-x-6 gap-y-10 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 xl:gap-x-8">
       <a href="#" class="group">
