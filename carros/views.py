@@ -30,6 +30,8 @@ def car_list(request):
 
 def plp(request):
     search = request.GET.get('search')
+    brand = request.GET.get('brand')
+
     if search:
         cars = Car.objects.filter(car_model__icontains=search)
     else:
