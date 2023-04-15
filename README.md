@@ -5,6 +5,9 @@
 ## JIRA
 <p>Você pode ver toda nossa organização clicando <a href="https://jiraprojectsccpo.atlassian.net/jira/software/projects/PDF/boards/1/roadmap">aqui</a>.</p>
 
+## Diagrama de atividades do sistema
+<p>Você pode ver o diagrama de atividades do nosso sistema clicando <a href="https://miro.com/app/board/uXjVMSyM3k8=/?share_link_id=393684768332">aqui</a>.</p>
+
 
 ## Produto
 O CarTradeo é uma plataforma web de marketaplace, na qual está em desenvolvimento para alcançar seu objetivo de facilitar o encontro entre diferentes vendedores e interessados na compra de carros.
