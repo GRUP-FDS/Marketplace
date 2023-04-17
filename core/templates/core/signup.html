@@ -23,17 +23,12 @@
       <label class="text-black">Repetir senha</label>
       <input type="password" name="password2" class="w-full mt-2 px-4 py-2 rounded-xl border border-2 border-gray-400">
     </div>
-
     {% if form.errors %}
-      {% for field in form %}
-        {% for error in field.errors %}
-          <div class="mb-5 p-4 rounded-xl bg-red-300 text-white">
-            <p>{{ error|escape }}</p>
-          </div>
-        {% endfor %}
+      {% for key, value in form.errors.items %}
+        <p class="text-red-400">{{ value }}</p>
       {% endfor %}
     {% endif %}
-  
+
     <button class="w-full text-base text-white mt-4 bg-sky-500 hover:bg-sky-600 transition-colors px-4 py-2 rounded-lg">Registrar</button>
 
     <a class="mt-6 flex justify-center" href="/login/">Já possui uma conta? Faça login</a>
