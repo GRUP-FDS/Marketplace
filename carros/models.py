@@ -5,6 +5,8 @@ class Car(models.Model):
   car_model = models.CharField(max_length=255)
   brand = models.CharField(max_length=255)
   year = models.IntegerField()
+  mileage=models.IntegerField()
+  fuel_type=models.CharField(max_length=2551)
   type = models.CharField(max_length=255)
   price = models.FloatField()
   color = models.CharField(max_length=255)
