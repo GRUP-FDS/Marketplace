@@ -30,7 +30,7 @@ A aplicação da técnica do pair programming tem sido muito útil não só para
 			Letícia Paoleschi
 			<br />
 			lpp@cesar.school
-			<img src="https://media.licdn.com/dms/image/C4D03AQGnDvgYKCA-Mg/profile-displayphoto-shrink_400_400/0/1668028040386?e=1683763200&v=beta&t=Oy_2hj-yspzisoQh1lvkLKakKR03x0bNsBuqne8JbmY" width=200>
+			<img src="https://media.licdn.com/dms/image/D4D03AQEWkpGgAcLo1g/profile-displayphoto-shrink_800_800/0/1681732287722?e=1687392000&v=beta&t=b8taqoBuy_6TfpusFoHErprWWqdCvnHE-uzzmktQP9U" width=200>
 	    </td>
 	    <td>
 			Bruna Carvalho
