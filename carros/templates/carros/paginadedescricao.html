@@ -1,13 +1,49 @@
 
 {% extends 'core/base.html' %}
 
-{% block title %}{{ title }}{% endblock title %}
-
+{% block title %}{{ car.brand }}{% endblock title %}
+\\ cadastrar o title na view
 {% block content %}
 
-<div class=" grid grid-cols-5 gap-6">
-    <div class="col-span-3">
-      <img src=" {{ car.image.url}}" class="rounded-xl">
+<div class="max-w-7xl mx-auto px-6 mt-10">
+  <!-- Image gallery -->
+  <div class="grid grid-cols-2 gap-4">
+    <img src="{{ car.image.url }}" alt="{{ car.car_model }}" class="w-full h-full max-h-[500px]">
+    <div>
+      <h1 class="text-2xl font-bold tracking-tight text-gray-900 sm:text-3xl">{{car.brand}} {{car.car_model}}</h1>
+
+      <p class="mt-4 text-base text-gray-900">{{ car.description }}</p>
+
+      <div class="grid grid-cols-3 gap-4 my-6">
+        <div class="flex flex-col">
+          <span class="text-[12px] text-gray-400">Marca</span>
+          <strong class="text-2xl">{{ car.brand }}</strong>
+        </div>
+        <div class="flex flex-col">
+          <span class="text-[12px] text-gray-400">Modelo</span>
+          <strong class="text-2xl">{{ car.car_model }}</strong>
+        </div>
+        <div class="flex flex-col">
+          <span class="text-[12px] text-gray-400">Ano</span>
+          <strong class="text-2xl">{{ car.year }}</strong>
+        </div>
+        <div class="flex flex-col">
+          <span class="text-[12px] text-gray-400">Estado</span>
+          <strong class="text-2xl">{{ car.type }}</strong>
+        </div>
+        <div class="flex flex-col">
+          <span class="text-[12px] text-gray-400">Cor</span>
+          <strong class="text-2xl">{{ car.color }}</strong>
+        </div>
+        <div class="flex flex-col">
+          <span class="text-[12px] text-gray-400">Preço</span>
+          <strong class="text-2xl">R$ {{ car.price }}</strong>
+        </div>
+      </div>
+
+      <a href="#" class="block mt-10 text-base text-center text-white bg-sky-500 hover:bg-sky-600 transition-colors px-4 py-3 w-full rounded-lg">Entrar em contato</a>
+    </div>
   </div>
+</div>
 
 {% endblock %}

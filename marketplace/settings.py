@@ -25,7 +25,7 @@ SECRET_KEY = 'django-insecure-wfc@w8cj_#)w%y%k0z00s7tl!nr!wg6d#0o%$wfkr^1t6+591(
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['cartradeo.us-east-2.elasticbeanstalk.com']
 
 LOGOUT_REDIRECT_URL = '/'
 LOGIN_REDIRECT_URL = '/'
@@ -80,7 +80,7 @@ WSGI_APPLICATION = 'marketplace.wsgi.application'
 
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
+        'ENGINE': 'utils.db.backends.sqlite3',
         'NAME': BASE_DIR / 'db.sqlite3',
     }
 }
@@ -121,6 +121,7 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/4.2/howto/static-files/
 
 STATIC_URL = 'static/'
+STATIC_ROOT = 'static'
 MEDIA_URL = 'media/'
 MEDIA_ROOT =  BASE_DIR / 'media'
 
