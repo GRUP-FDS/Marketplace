@@ -2,7 +2,7 @@
 
 ## Produto
 O CarTradeo é uma plataforma web de marketaplace, na qual está em desenvolvimento para alcançar seu objetivo de facilitar o encontro entre diferentes vendedores e interessados na compra de carros.
-<p>Você pode ver a nossa aplicação no ar clicando <a href="http://marketplaceprojetofds-env.eba-tybvqedm.eu-north-1.elasticbeanstalk.com/">aqui</a>.</p>
+<p>Você pode ver a nossa aplicação no ar clicando <a href="http://marketplaceprojetofds-env.eba-tybvqedm.eu-north-1.elasticbeanstalk.com/cars/13/#">aqui</a>.</p>
 
 ## Figma
 <p>Você pode ver o protótipo de baixa clicando <a href="https://www.figma.com/file/jvqSMSIrjMxfqVUOSmbXqs/CarTradeo-(Copy)?node-id=0%3A1&t=hzanEqdFZqAIZIWk-1">aqui</a>.</p>
