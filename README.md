@@ -4,7 +4,7 @@
 O CarTradeo é uma plataforma web de marketaplace, na qual está em desenvolvimento para alcançar seu objetivo de facilitar o encontro entre diferentes vendedores e interessados na compra de carros.
 
 ## Aplicação 
-<p>Você pode ver a nossa aplicação no ar clicando <a href="http://marketplaceprojetofds-env.eba-tybvqedm.eu-north-1.elasticbeanstalk.com/cars/13/#">aqui</a>.</p>
+<p>Você pode ver a nossa aplicação no ar clicando <a href="http://marketplaceprojetofds-env.eba-tybvqedm.eu-north-1.elasticbeanstalk.com/">aqui</a>.</p>
 
 Caso você queira criar uma conta no site, basta clicar no botão "Cadastrar" localizado no canto superior direito da página inicial. Isso irá direcioná-lo para uma página de cadastro, onde será necessário preencher as informações necessárias.
 
