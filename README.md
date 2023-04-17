@@ -10,6 +10,12 @@ Caso você queira criar uma conta no site, basta clicar no botão "Cadastrar" lo
 
 Já se você possui uma conta, pode fazer login clicando no botão "Entrar" no mesmo local. Na página de login, basta digitar seu nome de usuário e senha e clicar em "Entrar". Após o login, você será direcionado para a página principal do site, onde pode explorar seus diversos recursos, como buscar carros cadastrados pelo nome, visualizar todos os carros cadastrados e, se desejar, ver detalhes de cada carro. 
 
+Além disso, foi criado um usuário de teste para os casos em que os usuários desejem explorar a aplicação sem a necessidade de se cadastrar.
+
+Usuário: User 
+
+Senha: user123456
+
 ## Figma
 <p>Você pode ver o protótipo de baixa clicando <a href="https://www.figma.com/file/jvqSMSIrjMxfqVUOSmbXqs/CarTradeo-(Copy)?node-id=0%3A1&t=hzanEqdFZqAIZIWk-1">aqui</a>.</p>
 
