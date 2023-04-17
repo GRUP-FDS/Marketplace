@@ -14,7 +14,7 @@
 
       <p class="mt-4 text-base text-gray-900">{{ car.description }}</p>
 
-      <div class="grid grid-cols-3 gap-4 my-6">
+      <div class="grid grid-cols-3 gap-4 my-9">
         <div class="flex flex-col">
           <span class="text-[12px] text-gray-400">Marca</span>
           <strong class="text-2xl">{{ car.brand }}</strong>
@@ -34,6 +34,14 @@
         <div class="flex flex-col">
           <span class="text-[12px] text-gray-400">Cor</span>
           <strong class="text-2xl">{{ car.color }}</strong>
+        </div>
+        <div class="flex flex-col">
+          <span class="text-[12px] text-gray-400">Quilometragem</span>
+          <strong class="text-2xl"> {{ car.mileage }}</strong>
+        </div>
+        <div class="flex flex-col">
+          <span class="text-[12px] text-gray-400">Tipo de Combustível </span>
+          <strong class="text-2xl"> {{ car.fuel_type }}</strong>
         </div>
         <div class="flex flex-col">
           <span class="text-[12px] text-gray-400">Preço</span>
