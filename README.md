@@ -26,7 +26,7 @@ Senha: user123456
 <p>Você pode ver o diagrama de atividades do nosso sistema clicando <a href="https://miro.com/app/board/uXjVMSyM3k8=/?share_link_id=393684768332">aqui</a>.</p>
 
 ## SCREAMCAST
-<p>Assista <a href="https://youtu.be/M-mF4aDxeW4">aqui</a>.</p>
+<p>Assista <a href="https://youtu.be/M-mF4aDxeW4">aqui</a> da terceira entrega.</p>
 
 ## Nossa experiência utilizando o pair programming 
 A aplicação da técnica do pair programming tem sido muito útil não só para os benefícios padrões já identificados, como redução de erro no código, mas também para um estudo da tecnologia django em conjunto e na prática com a dupla. Na maior parte do tempo a programação em pares tem sido aplicada de forma online, onde o programador piloto compartilha a tela do código para que a sua dupla possa visualizar e ir acompanhando na construção do código. É uma prática produtiva principalmente para busca de soluções no código em que duraria mais tempo com apenas um desenvolvedor. O uso dessa técnica foi feita nessa entrega inicial pelos seguintes pares: Bruna Carvalho e Letícia Pinheiro; Guilherme Lopes e Camila cirne; Edmar Alencar e Arthur Reis.
