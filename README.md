@@ -26,7 +26,7 @@ Senha: user123456
 <p>Você pode ver o diagrama de atividades do nosso sistema clicando <a href="https://miro.com/app/board/uXjVMSyM3k8=/?share_link_id=393684768332">aqui</a>.</p>
 
 ## SCREAMCAST
-<p>Assista <a href="[https://youtu.be/M-mF4aDxeW4](https://www.youtube.com/watch?v=2qGJ8Jv_7F4&t=23s)">aqui</a> o vídeo da segunda entrega.</p>
+<p>Assista <a href="https://youtu.be/M-mF4aDxeW4](https://www.youtube.com/watch?v=2qGJ8Jv_7F4&t=23s">aqui</a> o vídeo da segunda entrega.</p>
 <p>Assista <a href="https://youtu.be/M-mF4aDxeW4">aqui</a> o vídeo da terceira entrega.</p>
 
 ## Nossa experiência utilizando o pair programming 
