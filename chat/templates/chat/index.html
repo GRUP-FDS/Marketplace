@@ -1,5 +1,58 @@
 {% extends 'core/base.html' %}
 
 {% block content %}
-<h1>Oi</h1>
+<div class="flex flex-col justify-center items-center py-6">
+  <h1>Chat</h1>
+</div>
+{% endblock %}
+
+{% block scripts %}
+{{ chat.id|json_script:"json-chatid" }}
+{{ request.user.username|json_script:"json-buyer" }}
+
+<script>
+  const chatId = JSON.parse(document.getElementById('json-chatid').textContent)
+  const buyer = JSON.parse(document.getElementById('json-buyer').textContent)
+
+  const chatSocket = new WebSocket(`ws://${window.location.host}/ws/${chatId}/`)
+  
+  chatSocket.onmessage = event => {
+    const data = JSON.parse(event.data)
+
+    if (data.message) {
+      let html = `
+        <div class="p-4 bg-gray-200 rounded-xl">
+          <p class="font-semibold">${data.buyer}</p>
+          <p>${data.message}</p>
+        </div>
+      `
+      document.querySelector('#chat-messages').innerHTML += html
+    } else {
+      alert('Message was empty.')
+    }
+
+    console.log({ data })
+  }
+  
+  chatSocket.onclose = (event) => {
+    console.log('onclose')
+  }
+
+  document.getElementById('chat-message-submit').onclick = (event) => {
+    event.preventDefault()
+
+    const messageInputDom = document.querySelector('#chat-message-input')
+    const message = messageInputDom.value
+
+    chatSocket.send(JSON.stringify({
+      'message': message,
+      'chatId': chatId,
+      'buyer': buyer,
+    }))
+
+    messageInputDom.value = ''
+
+    return false
+  }
+</script>
 {% endblock %}

@@ -49,7 +49,7 @@
         </div>
       </div>
 
-      <a href="#" class="block mt-10 text-base text-center text-white bg-sky-500 hover:bg-sky-600 transition-colors px-4 py-3 w-full rounded-lg">Entrar em contato</a>
+      <a href="{% url 'chat:detail' car.id %}?buyer={{ request.user.username }}" target="_self" class="block mt-10 text-base text-center text-white bg-sky-500 hover:bg-sky-600 transition-colors px-4 py-3 w-full rounded-lg">Entrar em contato</a>
     </div>
   </div>
 </div>
