@@ -7,5 +7,4 @@ urlpatterns = [
     path('new/', views.new, name="new"),
     path('<int:pk>/', views.pdp, name="pdp"),
     path('plp/', views.plp, name="plp"),  
-    
 ]

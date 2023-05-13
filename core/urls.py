@@ -10,4 +10,5 @@ urlpatterns = [
     path('logout/', auth_views.LogoutView.as_view(), name="logout"),
     path('my-ads/', views.my_ads, name="my_ads"),
     path('my-ads/delete/<int:pk>/', views.delete_ad, name='delete_car'),
+    
 ]
