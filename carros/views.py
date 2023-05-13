@@ -1,6 +1,11 @@
 from django.shortcuts import render, redirect, get_object_or_404
 from .forms import NewCarForm
 from carros.models import Car
+from django.http import JsonResponse
+from django.shortcuts import get_object_or_404, redirect, render
+from django.urls import reverse
+from django.contrib import messages
+from carros.models import Car
 
 # Create your views here.
 def new(request):
@@ -43,4 +48,5 @@ def pdp(request, pk):
    return render(request, 'carros/paginadedescricao.html', {
       'car': car
    }) 
+
 

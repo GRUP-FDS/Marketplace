@@ -1,8 +1,12 @@
-from django.shortcuts import render, redirect
+from carros.models import Car
+from django.contrib import messages
 from django.contrib.auth import login
+from django.contrib.auth.decorators import login_required
+from django.shortcuts import get_object_or_404, redirect, render
 from django.urls import reverse
 
 from .forms import SignupForm
+
 
 # Create your views here.
 def home(request):
@@ -12,6 +16,21 @@ def home(request):
     return redirect(reverse('carros:plp') + '?search=' + search)
   else:
     return render(request, 'core/home.html')
+
+def my_ads(request):
+    cars = Car.objects.filter(created_by=request.user)
+    return render(request, 'core/my_ads.html', {'cars': cars})
+
+@login_required
+def delete_ad(request, pk):
+    car = get_object_or_404(Car, pk=pk, created_by=request.user)
+    try:
+        car.delete()
+        messages.success(request, 'Anúncio deletado com sucesso.')
+    except:
+        messages.error(request, 'Ocorreu um erro ao deletar o anúncio.')
+    return redirect('my_ads')
+
 
 def signup(request):
   if request.method == 'POST':

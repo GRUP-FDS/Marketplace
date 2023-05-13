@@ -1,0 +1,32 @@
+{% extends 'core/base.html' %}
+
+{% block content %}
+  <div class="container mx-auto mt-8">
+    <h2 class="text-2xl font-bold mb-4">Meus anúncios</h2>
+    {% if cars %}
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
+        {% for car in cars %}
+          <div class="bg-white rounded-lg overflow-hidden shadow-lg hover:shadow-xl">
+            <img src="{{ car.image.url }}" alt="{{ car.car_model }}" class="w-full h-48 object-cover">
+            <div class="p-4">
+              <h3 class="font-bold text-xl mb-2">{{ car.car_model }}</h3>
+              <p class="text-gray-700 text-base">{{ car.description }}</p>
+              <p class="text-gray-700 text-base">{{ car.brand }} - {{ car.year }}</p>
+              <p class="text-gray-700 text-base">{{ car.price }}</p>
+              <a href="#" class="inline-block bg-gray-200 rounded-full px-3 py-1 text-sm font-semibold text-gray-700 mr-2 mb-2 hover:bg-gray-300">Descrição</a>
+              {% if not car.is_sold %}
+              <form action="{% url 'delete_car' pk=car.pk %}" method="POST" class="inline-block">
+                {% csrf_token %}
+                <input type="hidden" name="_method" value="DELETE">
+                <button type="submit" class="inline-block bg-gray-200 rounded-full px-3 py-1 text-sm font-semibold text-gray-700 mr-2 mb-2 hover:bg-gray-300">Deletar Anúncio</button>
+              </form>
+              {% endif %}
+            </div>
+          </div>
+        {% endfor %}
+      </div>
+    {% else %}
+      <p>Você ainda não tem anúncios.</p>
+    {% endif %}
+  </div>
+{% endblock %}

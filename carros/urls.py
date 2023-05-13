@@ -6,5 +6,6 @@ app_name = 'carros'
 urlpatterns = [
     path('new/', views.new, name="new"),
     path('<int:pk>/', views.pdp, name="pdp"),
-    path('plp/', views.plp, name="plp"),
+    path('plp/', views.plp, name="plp"),  
+    
 ]

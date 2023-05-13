@@ -30,3 +30,4 @@ def chat(request, id):
     'chat': chat,
     'messages': messages
   })
+
