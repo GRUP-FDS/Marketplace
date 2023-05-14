@@ -15,21 +15,21 @@ class MySeleniumTest(LiveServerTestCase):
         
         #LOGAR
         button = self.browser.find_element(By.ID,'logar').click()
-        sleep(1)
+        sleep(3)
 
         input_user = self.browser.find_element(By.ID,'user')
         input_senha = self.browser.find_element(By.ID,'senha')
         input_user.send_keys('lulu')
         input_senha.send_keys('soulinda')
         button = self.browser.find_element(By.ID,'login-registrar').click()
-        sleep(1)
+        sleep(3)
 
 
         #PESQUISANDO
         input_search = self.browser.find_element(By.ID,'search')
         input_search.send_keys('ka')
         button = self.browser.find_element(By.ID,'confirm-search').click()
-        sleep(1)
+        sleep(3)
 
         #button = self.browser.find_element(By.ID,'carcar').click()
         button = self.browser.find_element(By.ID,'home').click()
@@ -52,7 +52,7 @@ class MySeleniumTest(LiveServerTestCase):
         sleep(1)
         self.browser.find_element(By.ID,'cadastro').click()
         self.browser.find_element(By.ID,'criar-anuncios').click()
-        sleep(1)
+        sleep(3)
 
         input_title = self.browser.find_element(By.ID,'id_title')
         input_description = self.browser.find_element(By.ID,'id_description')
