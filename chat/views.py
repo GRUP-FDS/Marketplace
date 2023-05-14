@@ -12,13 +12,13 @@ def chat(request, id):
   car = Car.objects.get(pk=id)
   buyer = User.objects.get(username=buyerUsername)
   user = request.user
-  creator_of_product = car.created_by
+  creator_of_car = car.created_by
 
   messages = None
   chat = None
 
   try:
-    chat = Chat.objects.get(car=car, seller=creator_of_product, buyer=buyer)
+    chat = Chat.objects.get(car=car, seller=creator_of_car, buyer=buyer)
 
     messages = Message.objects.filter(chat=chat)
   except ObjectDoesNotExist:
