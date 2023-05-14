@@ -33,14 +33,56 @@ def car_list(request):
     return render(request, 'carros/description.html', context)
 
 def car_filter(request):
-    brand = Car.objects.values_list('make', flat=True).distinct()
-    car_model = Car.objects.values_list('model', flat=True).distinct()
-    year = Car.objects.values_list('year', flat=True).distinct()
-    mileage = Car.objects.values_list('mileage', flat=True).distinct()
-    fuel_type = Car.objects.values_list('fuel_type', flat=True).distinct()
-    type = Car.objects.values_list('type', flat=True).distinct()
-    price = Car.objects.values_list('price', flat=True).distinct()
-    color = Car.objects.values_list('color', flat=True).distinct()
+    queryset = Car.objects.all()
+    
+    if 'marca' in request.GET:
+        marca = request.GET['marca']
+        if marca:
+            queryset = queryset.filter(make__icontains=marca)
+    
+    if 'modelo' in request.GET:
+        modelo = request.GET['modelo']
+        if modelo:
+            queryset = queryset.filter(model__icontains=modelo)
+    
+    if 'ano' in request.GET:
+        ano = request.GET['ano']
+        if ano:
+            queryset = queryset.filter(year=ano)
+    
+    if 'cor' in request.GET:
+        cor = request.GET['cor']
+        if cor:
+            queryset = queryset.filter(color__icontains=cor)
+    
+    if 'quilometragem' in request.GET:
+        quilometragem = request.GET['quilometragem']
+        if quilometragem:
+            queryset = queryset.filter(mileage=quilometragem)
+    
+    if 'combustivel' in request.GET:
+        combustivel = request.GET['combustivel']
+        if combustivel:
+            queryset = queryset.filter(fuel_type__icontains=combustivel)
+    
+    if 'carroceria' in request.GET:
+        carroceria = request.GET['carroceria']
+        if carroceria:
+            queryset = queryset.filter(type__icontains=carroceria)
+    
+    if 'preco' in request.GET:
+        preco = request.GET['preco']
+        if preco:
+            queryset = queryset.filter(price=preco)
+    
+    brand = queryset.values_list('make', flat=True).distinct()
+    car_model = queryset.values_list('model', flat=True).distinct()
+    year = queryset.values_list('year', flat=True).distinct()
+    mileage = queryset.values_list('mileage', flat=True).distinct()
+    fuel_type = queryset.values_list('fuel_type', flat=True).distinct()
+    car_type = queryset.values_list('type', flat=True).distinct()
+    price = queryset.values_list('price', flat=True).distinct()
+    color = queryset.values_list('color', flat=True).distinct()
     
     context = {
         'Marca': brand,
@@ -49,11 +91,12 @@ def car_filter(request):
         'Cor': color,
         'Quilometragem': mileage,
         'Combustível': fuel_type,
-        'Tipo de Carroceria' : type,
+        'Tipo de Carroceria' : car_type,
         'Preço' : price
     }
     
-    return render(request, 'filter_cars.html', context)
+    return render(request, 'paginalistagem.html', context)
+
 
 def plp(request):
     search = request.GET.get('search')
