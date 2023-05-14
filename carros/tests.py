@@ -9,27 +9,29 @@ class MySeleniumTest(LiveServerTestCase):
     
     
     browser = webdriver.Chrome()
+    browser.maximize_window()
         # ... continue com as interações e validações na página web
     def test_cadastro(self):
         self.browser.get('http://127.0.0.1:8000/')
+        sleep(9)
         
         #LOGAR
         button = self.browser.find_element(By.ID,'logar').click()
-        sleep(1)
+        sleep(9)
 
         input_user = self.browser.find_element(By.ID,'user')
         input_senha = self.browser.find_element(By.ID,'senha')
         input_user.send_keys('lulu')
         input_senha.send_keys('soulinda')
         button = self.browser.find_element(By.ID,'login-registrar').click()
-        sleep(1)
+        sleep(3)
 
 
         #PESQUISANDO
         input_search = self.browser.find_element(By.ID,'search')
         input_search.send_keys('ka')
         button = self.browser.find_element(By.ID,'confirm-search').click()
-        sleep(1)
+        sleep(3)
 
         #button = self.browser.find_element(By.ID,'carcar').click()
         button = self.browser.find_element(By.ID,'home').click()
@@ -69,6 +71,8 @@ class MySeleniumTest(LiveServerTestCase):
         
         #BOTÃO SAIR
         self.browser.find_element(By.ID,'sairlogout').click()
+
+
 
         
         
