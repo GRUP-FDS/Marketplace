@@ -3,6 +3,59 @@
 {% block title %}{{ title }}{% endblock title %}
 
 {% block content %}
+<form method="GET" action='.' class="bg-white shadow p-2 rounded">
+    <div class="grid grid-cols-2 gap-2 mb-2">
+      <div>
+        <label for="marca" class="block text-sm">Marca:</label>
+        <input type="text" id="marca" name="marca" class="w-full border border-gray-300 rounded-sm px-2 py-1 text-sm">
+      </div>
+      <div>
+        <label for="modelo" class="block text-sm">Modelo:</label>
+        <input type="text" id="modelo" name="modelo" class="w-full border border-gray-300 rounded-sm px-2 py-1 text-sm">
+      </div>
+    </div>
+    
+    <div class="grid grid-cols-2 gap-2 mb-2">
+      <div>
+        <label for="ano" class="block text-sm">Ano:</label>
+        <input type="number" id="ano" name="ano" class="w-full border border-gray-300 rounded-sm px-2 py-1 text-sm">
+      </div>
+      <div>
+        <label for="cor" class="block text-sm">Cor:</label>
+        <input type="text" id="cor" name="cor" class="w-full border border-gray-300 rounded-sm px-2 py-1 text-sm">
+      </div>
+    </div>
+    
+    <div class="grid grid-cols-2 gap-2 mb-2">
+      <div>
+        <label for="quilometragem" class="block text-sm">Quilometragem:</label>
+        <input type="number" id="quilometragem" name="quilometragem" class="w-full border border-gray-300 rounded-sm px-2 py-1 text-sm">
+      </div>
+      <div>
+        <label for="combustivel" class="block text-sm">Combustível:</label>
+        <input type="text" id="combustivel" name="combustivel" class="w-full border border-gray-300 rounded-sm px-2 py-1 text-sm">
+      </div>
+    </div>
+    
+    <div class="grid grid-cols-2 gap-2 mb-2">
+      <div>
+        <label for="carroceria" class="block text-sm">Tipo de Carroceria:</label>
+        <input type="text" id="carroceria" name="carroceria" class="w-full border border-gray-300 rounded-sm px-2 py-1 text-sm">
+      </div>
+      <div>
+        <label for="preco" class="block text-sm">Preço:</label>
+        <input type="number" id="preco" name="preco" class="w-full border border-gray-300 rounded-sm px-2 py-1 text-sm">
+      </div>
+    </div>
+    
+    <button type="submit" class="bg-blue-500 text-white py-1 px-2 rounded-sm text-sm">Filtrar</button>
+  </form>
+  
+  
+
+
+
+
 <div class="mx-auto px-6 max-w-7xl my-10">
     <h1 class="text-3xl mb-4">Carros</h1>
 

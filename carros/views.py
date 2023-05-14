@@ -53,7 +53,7 @@ def car_filter(request):
         'Preço' : price
     }
     
-    return render(request, 'filter_cars.html', context)
+    return render(request, 'paginalistagem.html', context)
 
 def plp(request):
     search = request.GET.get('search')
