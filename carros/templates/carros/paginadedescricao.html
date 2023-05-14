@@ -24,8 +24,7 @@
           <strong class="text-2xl">{{ car.car_model }}</strong>
         </div>
         <div class="flex flex-col">
-          <span class="text-[12px] text-gray-400">Ano</spa
-            n>
+          <span class="text-[12px] text-gray-400">Ano</span>
           <strong class="text-2xl">{{ car.year }}</strong>
         </div>
         <div class="flex flex-col">
@@ -50,7 +49,11 @@
         </div>
       </div>
 
-      <a href="{% url 'chat:detail' car.id %}?buyer={{ request.user.username }}" target="_self" class="block mt-10 text-base text-center text-white bg-sky-500 hover:bg-sky-600 transition-colors px-4 py-3 w-full rounded-lg">Entrar em contato</a>
+      {% if request.user == car.created_by %}
+        <span class="mt-20 text-lg">Você é o dono desse anúncio.</span>
+      {% else %}
+        <a href="{% url 'chat:detail' car.id %}?buyer={{ request.user.username }}" target="_self" class="block mt-10 text-base text-center text-white bg-sky-500 hover:bg-sky-600 transition-colors px-4 py-3 w-full rounded-lg">Entrar em contato</a>
+      {% endif %}
     </div>
   </div>
 </div>
