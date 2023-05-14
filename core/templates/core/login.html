@@ -11,12 +11,12 @@
 
     <div class="mb-5">
       <label class="text-black">Nome de usuário</label>
-      <input type="text" name="username" class="w-full mt-2 px-4 py-2 rounded-xl border border-2 border-gray-400">
+      <input id="user" type="text" name="username" class="w-full mt-2 px-4 py-2 rounded-xl border border-2 border-gray-400">
     </div>
 
     <div class="mb-5">
       <label class="text-black">Senha</label>
-      <input type="password" name="password" class="w-full mt-2 px-4 py-2 rounded-xl border border-2 border-gray-400">
+      <input id="senha" type="password" name="password" class="w-full mt-2 px-4 py-2 rounded-xl border border-2 border-gray-400">
     </div>
 
     {% if form.non_field_errors %}
@@ -25,9 +25,9 @@
       {% endfor %}
     {% endif %}
   
-    <button class="w-full text-base text-white mt-4 bg-sky-500 hover:bg-sky-600 transition-colors px-4 py-2 rounded-lg">Login</button>
+    <button id='login-registrar' class="w-full text-base text-white mt-4 bg-sky-500 hover:bg-sky-600 transition-colors px-4 py-2 rounded-lg">Login</button>
 
-    <a class="mt-6 flex justify-center" href="/signup/">Não possui uma conta? Registre-se</a>
+    <a class="mt-6 flex justify-center" href="/signup/" id='registrar'>Não possui uma conta? Registre-se</a>
   </form>
 </div>
 {% endblock %}

@@ -9,7 +9,7 @@
     <h1 class="text-2xl text-black text-center">Criar um anúncio</h1>
     {% csrf_token %}
   
-    <div class="flex flex-col gap-4">
+    <div id="forms"class="flex flex-col gap-4">
       {{ form.as_p }}
     </div>
   
@@ -23,7 +23,7 @@
       {% endfor %}
     {% endif %}
   
-    <button class="w-full text-base text-white mt-4 bg-sky-500 hover:bg-sky-600 transition-colors px-4 py-2 rounded-lg">Criar produto</button>
+    <button id="botao-criar-produto"class="w-full text-base text-white mt-4 bg-sky-500 hover:bg-sky-600 transition-colors px-4 py-2 rounded-lg">Criar produto</button>
   </form>
 </div>
 {% endblock %}
