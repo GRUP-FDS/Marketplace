@@ -15,82 +15,100 @@ def set_Up():
 
 class MySeleniumTest(LiveServerTestCase):
         # ... continue com as interações e validações na página web
-    def cadastrar(self):
+    def test_cadastrar(self):
 
         browser = set_Up()
         browser.get('http://127.0.0.1:8000/')
+        browser.find_element(By.ID,'logar').click()
         browser.find_element(By.ID,'registrar').click()
         input_username = browser.find_element(By.ID,'input-username')
         input_password = browser.find_element(By.ID,'input-password')
         input_repassword = browser.find_element(By.ID,'input-repassword')
-        input_username.send_keys('lelezinha')
-        input_password.send_keys('soumaravilhosa')
-        input_repassword.send_keys('soumaravilhosa')
+        input_username.send_keys('lqlqzinha')
+        input_password.send_keys('soupomposa')
+        input_repassword.send_keys('soupomposa')
         sleep(1)
         browser.find_element(By.ID,'cadastro').click()
 
+        botao_sair = browser.find_element(By.ID,'sairlogout')
+        assert botao_sair.text == "Sair"
+
         #------------------------------------------------------------------------------------------------------------#
-    def logar(self):
+    def test_logar(self):
 
         browser = set_Up()
         browser.get('http://127.0.0.1:8000/')
-        button = browser.find_element(By.ID,'logar').click()
+        browser.find_element(By.ID,'logar').click()
         input_user = browser.find_element(By.ID,'user')
         input_senha = browser.find_element(By.ID,'senha')
         input_user.send_keys('lulu')
         input_senha.send_keys('soulinda')
-        button = browser.find_element(By.ID,'login-registrar').click()
+        browser.find_element(By.ID,'login-registrar').click()
         sleep(1)
 
+        botao_sair = browser.find_element(By.ID,'sairlogout')
+        assert botao_sair.text == "Sair"
         #------------------------------------------------------------------------------------------------------------#
-    def pesquisar_anuncio(self):
+    def test_pesquisar_anuncio(self):
 
         browser = set_Up()
         browser.get('http://127.0.0.1:8000/')
-        button = browser.find_element(By.ID,'filtros').click()
+        browser.find_element(By.ID,'filtros').click()
         input_filter_brand = browser.find_element(By.ID,'filter_brand')
         input_filter_brand.send_keys('ford')
-        input_filter_model = browser.find_element(By.ID,'filter_model')
+        input_filter_model = browser.find_element(By.ID,'filter-model')
         input_filter_model.send_keys('ka')
+        browser.find_element(By.ID,'botao_filtrar').click()
 
+        carro_exemplo = browser.find_element(By.ID,'nome_carro')
+        assert carro_exemplo.text == "FORD KA"
+ 
         #------------------------------------------------------------------------------------------------------------#
-    def visualizar_anuncio(self):
+    def test_visualizar_anuncio(self):
 
         browser = set_Up()
-        button = browser.find_element(By.ID,'logar').click()
+        browser.get('http://127.0.0.1:8000/')
+        browser.find_element(By.ID,'logar').click()
         input_user = browser.find_element(By.ID,'user')
         input_senha = browser.find_element(By.ID,'senha')
         input_user.send_keys('lulu')
         input_senha.send_keys('soulinda')
-        button = browser.find_element(By.ID,'login-registrar').click()
+        browser.find_element(By.ID,'login-registrar').click()
         sleep(1)
         browser.find_element(By.ID,'botao-meus-anuncios').click()
         sleep(1)
+
+        meus_anuncios = browser.find_element(By.ID,'confirmar_anuncio')
+        assert meus_anuncios.text == "Meus anúncios"
         #------------------------------------------------------------------------------------------------------------#
 
-    def chat_online(self):
+    def test_chat_online(self):
 
         browser = set_Up()
+        browser.get('http://127.0.0.1:8000/')
+        sleep(1)
         input_search = browser.find_element(By.ID,'search')
         input_search.send_keys('ka')
         sleep(1)
-        button = browser.find_element(By.ID,'confirm-search').click()
-        button = browser.find_element(By.ID,'descricao-carro').click()
-        button = browser.find_element(By.ID,'botao_entrar_contato').click()
+        browser.find_element(By.ID,'confirm-search').click()
+        browser.find_element(By.ID,'descricao-carro').click()
+        browser.find_element(By.ID,'botao_entrar_contato').click()
         #------------------------------------------------------------------------------------------------------------#
 
-    def criar_anuncio(self):
+    def test_criar_anuncio(self):
         
         browser = set_Up()
-        button = browser.find_element(By.ID,'logar').click()
+        browser.get('http://127.0.0.1:8000/')
+        sleep(1)
+        browser.find_element(By.ID,'logar').click()
         input_user = browser.find_element(By.ID,'user')
         input_senha = browser.find_element(By.ID,'senha')
         input_user.send_keys('lulu')
         input_senha.send_keys('soulinda')
-        button = browser.find_element(By.ID,'login-registrar').click()
+        browser.find_element(By.ID,'login-registrar').click()
         sleep(1)
 
-        browser.get('http://127.0.0.1:8000/')
+        
         browser.find_element(By.ID,'criar-anuncios').click()
         sleep(1)
         input_marca = browser.find_element(By.ID,'id_brand')
@@ -120,23 +138,32 @@ class MySeleniumTest(LiveServerTestCase):
         
         #ENTRANDO NOS MEUS ANUNCIOS
         browser.find_element(By.ID,'botao-meus-anuncios').click()
+        sleep(2)
+
+        meus_anuncios_exemplo = browser.find_element(By.ID,'anuncio_exemplo')
+        print(meus_anuncios_exemplo)
+        assert meus_anuncios_exemplo.text == "Este é um produto de teste"
         #------------------------------------------------------------------------------------------------------------#
 
-    def deleter_anuncio(self):
+    def test_deleter_anuncio(self):
 
         browser = set_Up()
-        button = browser.find_element(By.ID,'logar').click()
+        browser.get('http://127.0.0.1:8000/')
+        browser.find_element(By.ID,'logar').click()
         input_user = browser.find_element(By.ID,'user')
         input_senha = browser.find_element(By.ID,'senha')
         input_user.send_keys('lulu')
         input_senha.send_keys('soulinda')
-        button = browser.find_element(By.ID,'login-registrar').click()
+        browser.find_element(By.ID,'login-registrar').click()
         sleep(1)
         
-        browser.get('http://127.0.0.1:8000/')
         browser.find_element(By.ID,'botao-meus-anuncios').click()
         browser.find_element(By.ID,'delete_my_ads').click()
         browser.find_element(By.ID,'confirm_delete').click()
+
+        mensagem_sem_anuncio = browser.find_element(By.ID,'mensagem_sem_anuncio')
+        assert mensagem_sem_anuncio.text == "Você ainda não tem nenhum anúncio. Crie um agora."
+
         #------------------------------------------------------------------------------------------------------------#
 
     # def tearDown(self):
