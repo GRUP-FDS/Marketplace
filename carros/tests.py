@@ -49,6 +49,8 @@ class MySeleniumTest(LiveServerTestCase):
         input_price = self.browser.find_element(By.ID,'id_price')
         input_color = self.browser.find_element(By.ID,'id_color')
         input_image = self.browser.find_element(By.ID, 'id_image')
+        input_descricao = self.browser.find_element(By.ID,'id_description')
+        input_descricao = self.browser.find_element(By.ID,'id_description')
         input_descricao = self.browser.find_element(By.ID,'id_description') 
        
 
@@ -81,7 +83,6 @@ class MySeleniumTest(LiveServerTestCase):
         self.browser.find_element(By.ID,'confirm_delete').click()
         button = self.browser.find_element(By.ID,'home').click()
         sleep(1)
->>>>>>> 47f933fe70f8d1ab5ee4f05a3ab8ffa22048d9e6
 
         #BOTÃO SAIR
         self.browser.find_element(By.ID,'sairlogout').click()
