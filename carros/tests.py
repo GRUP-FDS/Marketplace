@@ -17,7 +17,7 @@ class MySeleniumTest(LiveServerTestCase):
         
         #LOGAR
         button = self.browser.find_element(By.ID,'logar').click()
-        sleep(9)
+        sleep(1)
 
         input_user = self.browser.find_element(By.ID,'user')
         input_senha = self.browser.find_element(By.ID,'senha')
@@ -27,48 +27,59 @@ class MySeleniumTest(LiveServerTestCase):
         sleep(3)
 
 
-        #PESQUISANDO
+        #PESQUISANDO CARRO E VER DETALHES
         input_search = self.browser.find_element(By.ID,'search')
         input_search.send_keys('ka')
         button = self.browser.find_element(By.ID,'confirm-search').click()
+        button = self.browser.find_element(By.ID, 'descricao-carro').click()
         sleep(3)
 
-        #button = self.browser.find_element(By.ID,'carcar').click()
+        #CRIANDO ANUNCIO 
         button = self.browser.find_element(By.ID,'home').click()
-
-
-        
-        #TESTE PARA DELETAR ANÚNCIO
-        button = self.browser.find_element(By.ID,'logar')
-        button.click()
-        sleep(1)
-        button = self.browser.find_element(By.ID,'registrar')
-        button.click()
-        sleep(1)
-        input_username = self.browser.find_element(By.ID,'input-username')
-        input_password = self.browser.find_element(By.ID,'input-password')
-        input_repassword = self.browser.find_element(By.ID,'input-repassword')
-        input_username.send_keys('luluzinha2')
-        input_password.send_keys('soulindalinda2')
-        input_repassword.send_keys('soulindalinda2')
-        sleep(1)
-        self.browser.find_element(By.ID,'cadastro').click()
+        #COLOCANDO DADOS DO ANUNCIO 
         self.browser.find_element(By.ID,'criar-anuncios').click()
+        input_marca = self.browser.find_element(By.ID,'id_brand')
+        input_model = self.browser.find_element(By.ID,'id_car_model')
+        input_km = self.browser.find_element(By.ID,'id_mileage')
+        input_ano = self.browser.find_element(By.ID,'id_year')
+        input_combustivel = self.browser.find_element(By.ID,'id_fuel_type')
+        input_estado = self.browser.find_element(By.ID,'id_type')
+        input_price = self.browser.find_element(By.ID,'id_price')
+        input_color = self.browser.find_element(By.ID,'id_color')
+        input_image = self.browser.find_element(By.ID, 'id_image')
+        input_descricao = self.browser.find_element(By.ID,'id_description') 
+       
+
+        
+        #preenchendo campos
+        input_marca.send_keys('Produto de Teste')
+        input_model.send_keys('Este é um produto de teste')
+        input_km.send_keys('10')
+        input_ano.send_keys('2023')
+        input_combustivel.send_keys('2023')
+        input_estado.send_keys('2023')
+        input_price.send_keys('2023')
+        input_color.send_keys('2023')
+        #input_image.send_keys('image.padrao')
+        input_descricao.send_keys('jsjshjshsjhjk')
+        self.browser.find_element(By.ID,'botao-criar-produto').click()    
+        sleep(1)
+        
+        #ENTRANDO NOS MEUS ANUNCIOS
+        self.browser.find_element(By.ID,'botao-meus-anuncios').click()
+
+        #ENTRANDO NA DESCRICAO DOS MEUS ANUNCIOS
+        self.browser.find_element(By.ID,'descricao_my_ads').click()
+        self.browser.find_element(By.ID,'botao-meus-anuncios').click()
+        sleep(1)
+        #DEELETANDO ANUNCIO
+        self.browser.find_element(By.ID,'delete_my_ads').click()
+        self.browser.find_element(By.ID,'cancel_delete').click()
+        self.browser.find_element(By.ID,'delete_my_ads').click()
+        self.browser.find_element(By.ID,'confirm_delete').click()
+        button = self.browser.find_element(By.ID,'home').click()
         sleep(1)
 
-        input_title = self.browser.find_element(By.ID,'id_title')
-        input_description = self.browser.find_element(By.ID,'id_description')
-        input_price = self.browser.find_element(By.ID,'id_price')
-        input_image = self.browser.find_element(By.ID,'id_image')
-        input_title.send_keys('Produto de Teste')
-        input_description.send_keys('Este é um produto de teste')
-        input_price.send_keys('10.99')
-        input_image.send_keys('C:\caminho\para\imagem.jpg')
-        sleep(1)
-        
-        self.browser.find_element(By.ID,'botao-criar-produto').click()
-        sleep(1)
-        
         #BOTÃO SAIR
         self.browser.find_element(By.ID,'sairlogout').click()
 

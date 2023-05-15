@@ -13,12 +13,12 @@
               <p class="text-gray-700 text-base">{{ car.description }}</p>
               <p class="text-gray-700 text-base">{{ car.brand }} - {{ car.year }}</p>
               <p class="text-gray-700 text-base">{{ car.price }}</p>
-              <a href="{% url 'carros:pdp' car.id %}" class="inline-block bg-gray-200 rounded-full px-3 py-1 text-sm font-semibold text-gray-700 mr-2 mb-2 hover:bg-gray-300">Descrição</a>
+              <a id="descricao_my_ads" href="{% url 'carros:pdp' car.id %}" class="inline-block bg-gray-200 rounded-full px-3 py-1 text-sm font-semibold text-gray-700 mr-2 mb-2 hover:bg-gray-300">Descrição</a>
               {% if not car.is_sold %}
               <form action="{% url 'delete_car' pk=car.pk %}" method="POST" class="inline-block">
                 {% csrf_token %}
                 <input type="hidden" name="_method" value="DELETE">
-                <button type="button" onclick="openModal('delete-modal-{{ car.pk }}')" class="inline-block bg-gray-200 rounded-full px-3 py-1 text-sm font-semibold text-gray-700 mr-2 mb-2 hover:bg-gray-300">Deletar Anúncio</button>
+                <button id="delete_my_ads" type="button" onclick="openModal('delete-modal-{{ car.pk }}')" class="inline-block bg-gray-200 rounded-full px-3 py-1 text-sm font-semibold text-gray-700 mr-2 mb-2 hover:bg-gray-300">Deletar Anúncio</button>
               </form>
               {% endif %}
             </div>
@@ -40,8 +40,8 @@
                 <form action="{% url 'delete_car' pk=car.pk %}" method="POST">
                 {% csrf_token %}
                 <input type="hidden" name="_method" value="DELETE">
-                <button type="button" onclick="closeModal('delete-modal-{{ car.pk }}')" class="bg-gray-500 hover:bg-gray-700 text-white font-bold py-2 px-4 rounded ml-4">Cancelar</button>
-                <button type="submit" class="bg-red-500 hover:bg-red-700 text-white font-bold py-2 px-4 rounded ml-4">Confirmar</button>
+                <button id="cancel_delete" type="button" onclick="closeModal('delete-modal-{{ car.pk }}')" class="bg-gray-500 hover:bg-gray-700 text-white font-bold py-2 px-4 rounded ml-4">Cancelar</button>
+                <button id="confirm_delete" type="submit" class="bg-red-500 hover:bg-red-700 text-white font-bold py-2 px-4 rounded ml-4">Confirmar</button>
                 </form>
                 </div>
                 </div>
