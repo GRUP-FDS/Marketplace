@@ -24,9 +24,9 @@ class MySeleniumTest(LiveServerTestCase):
         input_username = browser.find_element(By.ID,'input-username')
         input_password = browser.find_element(By.ID,'input-password')
         input_repassword = browser.find_element(By.ID,'input-repassword')
-        input_username.send_keys('lqlqzinha')
-        input_password.send_keys('soupomposa')
-        input_repassword.send_keys('soupomposa')
+        input_username.send_keys('hhhhzuzu')
+        input_password.send_keys('soucaraeezuzu')
+        input_repassword.send_keys('soucaraeezuzu')
         sleep(1)
         browser.find_element(By.ID,'cadastro').click()
 
@@ -41,8 +41,8 @@ class MySeleniumTest(LiveServerTestCase):
         browser.find_element(By.ID,'logar').click()
         input_user = browser.find_element(By.ID,'user')
         input_senha = browser.find_element(By.ID,'senha')
-        input_user.send_keys('lulu')
-        input_senha.send_keys('soulinda')
+        input_user.send_keys('hhhhzuzu')
+        input_senha.send_keys('soucaraeezuzu')
         browser.find_element(By.ID,'login-registrar').click()
         sleep(1)
 
@@ -71,8 +71,8 @@ class MySeleniumTest(LiveServerTestCase):
         browser.find_element(By.ID,'logar').click()
         input_user = browser.find_element(By.ID,'user')
         input_senha = browser.find_element(By.ID,'senha')
-        input_user.send_keys('lulu')
-        input_senha.send_keys('soulinda')
+        input_user.send_keys('hhhhzuzu')
+        input_senha.send_keys('soucaraeezuzu')
         browser.find_element(By.ID,'login-registrar').click()
         sleep(1)
         browser.find_element(By.ID,'botao-meus-anuncios').click()
@@ -87,12 +87,30 @@ class MySeleniumTest(LiveServerTestCase):
         browser = set_Up()
         browser.get('http://127.0.0.1:8000/')
         sleep(1)
+        browser.find_element(By.ID,'logar').click()
+        input_user = browser.find_element(By.ID,'user')
+        input_senha = browser.find_element(By.ID,'senha')
+        input_user.send_keys('guiguigui')
+        input_senha.send_keys('letletlet1')
+        browser.find_element(By.ID,'login-registrar').click()
+        browser.find_element(By.ID,'home').click()
+        sleep(1)
+
         input_search = browser.find_element(By.ID,'search')
         input_search.send_keys('ka')
         sleep(1)
         browser.find_element(By.ID,'confirm-search').click()
         browser.find_element(By.ID,'descricao-carro').click()
         browser.find_element(By.ID,'botao_entrar_contato').click()
+        sleep(1)
+        input_masseges = browser.find_element(By.ID,'chat-message-input')
+        input_masseges.send_keys('Olá, estou interessado no seu carro')
+        sleep(2)
+        browser.find_element(By.ID,'chat-message-submit').click()
+        sleep(3)
+
+        mensagem = browser.find_element(By.ID,'mensagem_exemplo')
+        assert mensagem.text == "Olá, estou interessado no seu carro"
         #------------------------------------------------------------------------------------------------------------#
 
     def test_criar_anuncio(self):
@@ -103,8 +121,8 @@ class MySeleniumTest(LiveServerTestCase):
         browser.find_element(By.ID,'logar').click()
         input_user = browser.find_element(By.ID,'user')
         input_senha = browser.find_element(By.ID,'senha')
-        input_user.send_keys('lulu')
-        input_senha.send_keys('soulinda')
+        input_user.send_keys('hhhhzuzu')
+        input_senha.send_keys('soucaraeezuzu')
         browser.find_element(By.ID,'login-registrar').click()
         sleep(1)
 
@@ -138,7 +156,7 @@ class MySeleniumTest(LiveServerTestCase):
         
         #ENTRANDO NOS MEUS ANUNCIOS
         browser.find_element(By.ID,'botao-meus-anuncios').click()
-        sleep(2)
+        sleep(1)
 
         meus_anuncios_exemplo = browser.find_element(By.ID,'anuncio_exemplo')
         print(meus_anuncios_exemplo)
@@ -152,8 +170,8 @@ class MySeleniumTest(LiveServerTestCase):
         browser.find_element(By.ID,'logar').click()
         input_user = browser.find_element(By.ID,'user')
         input_senha = browser.find_element(By.ID,'senha')
-        input_user.send_keys('lulu')
-        input_senha.send_keys('soulinda')
+        input_user.send_keys('hhhhzuzu')
+        input_senha.send_keys('soucaraeezuzu')
         browser.find_element(By.ID,'login-registrar').click()
         sleep(1)
         
