@@ -27,9 +27,9 @@ Senha: user123456
 
 ## SCREAMCAST
 <p>Assista <a href="https://youtu.be/M-mF4aDxeW4](https://www.youtube.com/watch?v=2qGJ8Jv_7F4&t=23s">aqui</a> o vídeo da primeira entrega.</p>
-<p>Assista <a href="https://youtu.be/M-mF4aDxeW4">aqui</a> o vídeo da segunda entrega.</p>\
+<p>Assista <a href="https://youtu.be/M-mF4aDxeW4">aqui</a> o vídeo da segunda entrega.</p>
 
-VIDEOS DA TERCEIRA ENTREGA
+## VIDEOS DA TERCEIRA ENTREGA
 
 <p> Assista <a href="https://share.vidyard.com/watch/qXoAUsxGUoBkSVgHyQVvGS?">aqui</a> o vídeo com as novas histórias adicionadas no protótipo de baixa.</p>
 
