@@ -26,10 +26,19 @@ Senha: user123456
 <p>Você pode ver o diagrama de atividades do nosso sistema clicando <a href="https://miro.com/app/board/uXjVMSyM3k8=/?share_link_id=393684768332">aqui</a>.</p>
 
 ## SCREAMCAST
-<p>Assista <a href="https://youtu.be/M-mF4aDxeW4](https://www.youtube.com/watch?v=2qGJ8Jv_7F4&t=23s">aqui</a> o vídeo da segunda entrega.</p>
-<p>Assista <a href="https://youtu.be/M-mF4aDxeW4">aqui</a> o vídeo da terceira entrega.</p>
+<p>Assista <a href="https://youtu.be/M-mF4aDxeW4](https://www.youtube.com/watch?v=2qGJ8Jv_7F4&t=23s">aqui</a> o vídeo da primeira entrega.</p>
+<p>Assista <a href="https://youtu.be/M-mF4aDxeW4">aqui</a> o vídeo da segunda entrega.</p>\
+
+VIDEOS DA TERCEIRA ENTREGA
 
 <p> Assista <a href="https://share.vidyard.com/watch/qXoAUsxGUoBkSVgHyQVvGS?">aqui</a> o vídeo com as novas histórias adicionadas no protótipo de baixa.</p>
+
+<p> Assista <a href="https://share.vidyard.com/watch/vKDEKKCPEnu26MAmS3CYHx?">aqui</a> o vídeo com as novas histórias adicionadas no site na aws.</p>
+
+<p> Assista <a href="https://share.vidyard.com/watch/3K5PizKmVPYqhqpSB93vTe?">aqui</a> o vídeo da história do chat funcionando na local.</p>
+
+<p> Assista <a href="">aqui</a> o vídeo dos testes automatizados.</p>
+
 
 ## Nossa experiência utilizando o pair programming 
 A aplicação da técnica do pair programming tem sido muito útil não só para os benefícios padrões já identificados, como redução de erro no código, mas também para um estudo da tecnologia django em conjunto e na prática com a dupla. Na maior parte do tempo a programação em pares tem sido aplicada de forma online, onde o programador piloto compartilha a tela do código para que a sua dupla possa visualizar e ir acompanhando na construção do código. É uma prática produtiva principalmente para busca de soluções no código em que duraria mais tempo com apenas um desenvolvedor. O uso dessa técnica foi feita nessa entrega inicial pelos seguintes pares: Bruna Carvalho e Letícia Pinheiro; Guilherme Lopes e Camila Cirne; Edmar Alencar e Arthur Reis. Na Sprint 3, ocorreu uma mudança de pares: Bruna Carvalho e Arthur Reis; Letícia Pinheiro e Guilherme Lopes; Edmar Alencar e Camila Cirne.
