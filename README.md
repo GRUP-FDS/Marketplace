@@ -37,7 +37,7 @@ VIDEOS DA TERCEIRA ENTREGA
 
 <p> Assista <a href="https://share.vidyard.com/watch/3K5PizKmVPYqhqpSB93vTe?">aqui</a> o vídeo da história do chat funcionando na local.</p>
 
-<p> Assista <a href="">aqui</a> o vídeo dos testes automatizados.</p>
+<p> Assista <a href="https://share.vidyard.com/watch/33U7XQHhMjnc1JEBL7Vb8N">aqui</a> o vídeo dos testes automatizados.</p>
 
 
 ## Nossa experiência utilizando o pair programming 
