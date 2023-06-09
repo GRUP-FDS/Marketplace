@@ -14,6 +14,7 @@
               <p class="text-gray-700 text-base">{{ car.brand }} - {{ car.year }}</p>
               <p class="text-gray-700 text-base">{{ car.price }}</p>
               <a id="descricao_my_ads" href="{% url 'carros:pdp' car.id %}" class="inline-block bg-gray-200 rounded-full px-3 py-1 text-sm font-semibold text-gray-700 mr-2 mb-2 hover:bg-gray-300">Descrição</a>
+              <a id="atualizar_my_ads" href="{% url 'carros:edit' car.id %}" class="inline-block bg-gray-200 rounded-full px-3 py-1 text-sm font-semibold text-gray-700 mr-2 mb-2 hover:bg-gray-300">Atualizar</a>
               {% if not car.is_sold %}
               <form action="{% url 'delete_car' pk=car.pk %}" method="POST" class="inline-block">
                 {% csrf_token %}

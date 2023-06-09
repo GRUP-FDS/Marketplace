@@ -8,6 +8,7 @@ from .models import Chat, Message
 # Create your views here.
 def chat(request, id):
   buyerUsername = request.GET.get('buyer')
+  sellerUsername = request.GET.get('seller')
 
   car = Car.objects.get(pk=id)
   buyer = User.objects.get(username=buyerUsername)
@@ -17,6 +18,7 @@ def chat(request, id):
   messages = None
   chat = None
 
+
   try:
     chat = Chat.objects.get(car=car, seller=creator_of_car, buyer=buyer)
 
@@ -25,6 +27,7 @@ def chat(request, id):
     chat = Chat(buyer=user, seller=car.created_by, car=car)
     chat.save()
 
+  print(messages)
   return render(request, 'chat/index.html', {
     'car': car,
     'chat': chat,
