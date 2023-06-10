@@ -6,6 +6,7 @@ from django.shortcuts import get_object_or_404, redirect, render
 from django.urls import reverse
 from django.contrib import messages
 from carros.models import Car
+from django.http import HttpResponseRedirect
 
 # Create your views here.
 def new(request):
@@ -28,7 +29,8 @@ def new(request):
 
 def car_list(request):
     search = request.GET.get('search')
-    objects = Car.objects.filter(car_model__icontains=search)
+    #objects = Car.objects.filter(car_model__icontains=search)
+    objects = Car.objects.filter(created_by=request.user, is_sold=False)  # Somente carros do usuário atual e não vendidos
     context = {'carros': objects}
     return render(request, 'carros/description.html', context)
 
@@ -46,7 +48,8 @@ def plp(request):
     carroceria = request.GET.get('carroceria')
     preco = request.GET.get('preco')
 
-    cars = Car.objects.all()
+    #cars = Car.objects.all()
+    cars = Car.objects.filter(is_sold=False)  # Somente carros não vendidos
 
     if search:
         cars = cars.filter(car_model__icontains=search)
@@ -93,4 +96,13 @@ def pdp(request, pk):
       'car': car
    }) 
 
+def finalize(request, car_id):
+    car = get_object_or_404(Car, id=car_id)
+    if car.created_by == request.user:
+        car.is_sold = True
+        car.save()
+        return HttpResponseRedirect(reverse('carros:pdp', args=[car_id]))
+    else:
+        # Adicione o tratamento para quando o usuário não for o criador do carro
+        return redirect('home')  # Ou redirecione para outra página, se preferir
 

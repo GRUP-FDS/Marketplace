@@ -1,4 +1,3 @@
-
 {% extends 'core/base.html' %}
 
 {% block title %}{{ car.brand }}{% endblock title %}
@@ -50,10 +49,30 @@
       </div>
 
       {% if request.user == car.created_by %}
-        <span class="mt-20 text-lg">Você é o dono desse anúncio.</span>
+      <span class="mt-20 text-lg">Você é o dono desse anúncio.</span>
       {% else %}
-        <a href="{% url 'chat:detail' car.id %}?buyer={{ request.user.username }}" target="_self" class="block mt-10 text-base text-center text-white bg-sky-500 hover:bg-sky-600 transition-colors px-4 py-3 w-full rounded-lg">Entrar em contato</a>
+      <a href="{% url 'chat:detail' car.id %}?buyer={{ request.user.username }}" target="_self"
+        class="block mt-10 text-base text-center text-white bg-sky-500 hover:bg-sky-600 transition-colors px-4 py-3 w-full rounded-lg">Entrar
+        em contato</a>
       {% endif %}
+
+      {% load static %}
+
+      {% if request.user == car.created_by %}
+      <form action="{% url 'carros:finalize' car.id %}" method="post" class="inline">
+        {% csrf_token %}
+        <button type="submit"
+          class="block mt-10 text-base text-center text-white bg-sky-500 hover:bg-sky-600 transition-colors px-4 py-3 w-full rounded-lg">Marcar
+          como Vendido</button>
+      </form>
+
+      {% endif %}
+
+      <!-- Adição da tag vermelha para carros vendidos -->
+      {% if car.is_sold %}
+      <span class="mt-4 px-2 py-1 text-xs text-white bg-red-500 rounded-full">Vendido</span>
+      {% endif %}
+
     </div>
   </div>
 </div>

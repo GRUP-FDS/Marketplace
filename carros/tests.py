@@ -3,12 +3,14 @@ from time import sleep
 from django.test import LiveServerTestCase
 from selenium import webdriver
 from selenium.webdriver.common.by import By
+from selenium.webdriver.chrome.options import Options
 
 
 class MySeleniumTest(LiveServerTestCase):
     
-    
-    browser = webdriver.Chrome()
+    chrome_options = Options()
+    chrome_options.add_argument("--remote-debugging-port=8000") 
+    browser = webdriver.Chrome(options=chrome_options)
     browser.maximize_window()
         # ... continue com as interações e validações na página web
     def test_cadastro(self):
@@ -26,7 +28,6 @@ class MySeleniumTest(LiveServerTestCase):
         button = self.browser.find_element(By.ID,'login-registrar').click()
         sleep(3)
 
-
         #PESQUISANDO
         input_search = self.browser.find_element(By.ID,'search')
         input_search.send_keys('ka')
@@ -35,8 +36,6 @@ class MySeleniumTest(LiveServerTestCase):
 
         #button = self.browser.find_element(By.ID,'carcar').click()
         button = self.browser.find_element(By.ID,'home').click()
-
-
         
         #TESTE PARA DELETAR ANÚNCIO
         button = self.browser.find_element(By.ID,'logar')
@@ -71,14 +70,6 @@ class MySeleniumTest(LiveServerTestCase):
         
         #BOTÃO SAIR
         self.browser.find_element(By.ID,'sairlogout').click()
-
-
-
-        
-        
-
-
-
 
     def tearDown(self):
         self.selenium.quit()
