@@ -1,5 +1,5 @@
 from django.shortcuts import render, redirect, get_object_or_404
-from .forms import NewCarForm
+from .forms import NewCarForm, EditCarForm
 from carros.models import Car
 from django.http import JsonResponse
 from django.shortcuts import get_object_or_404, redirect, render
@@ -7,6 +7,7 @@ from django.urls import reverse
 from django.contrib import messages
 from carros.models import Car
 from django.http import HttpResponseRedirect
+from django.contrib.auth.decorators import login_required
 
 # Create your views here.
 def new(request):
@@ -26,6 +27,24 @@ def new(request):
     'form': form,
     'title': 'Novo Anúncio'
   })
+
+@login_required
+def edit(request, pk):
+    car = get_object_or_404(Car, pk=pk, created_by=request.user)
+
+    if request.method == 'POST':
+        form = EditCarForm(request.POST, request.FILES, instance=car)
+
+        if form.is_valid():
+            form.save()
+
+            return redirect('carros:pdp', pk=car.id)
+    else:
+        form = EditCarForm(instance=car)
+
+    return render(request, 'carros/edit-form.html', {
+        'form': form,
+    })
 
 def car_list(request):
     search = request.GET.get('search')

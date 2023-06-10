@@ -8,4 +8,5 @@ urlpatterns = [
     path('<int:pk>/', views.pdp, name="pdp"),
     path('plp/', views.plp, name="plp"),  
     path('finalize/<int:car_id>/', views.finalize , name='finalize'),
+    path('edit/<int:pk>/', views.edit, name="edit"),  
 ]

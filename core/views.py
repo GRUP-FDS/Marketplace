@@ -1,4 +1,6 @@
 from carros.models import Car
+from chat.models import Chat
+from django.db.models import Q
 from django.contrib import messages
 from django.contrib.auth import login
 from django.contrib.auth.decorators import login_required
@@ -46,3 +48,11 @@ def signup(request):
       form = SignupForm()
 
   return render(request, 'core/signup.html', {'form': form})
+
+@login_required
+def my_chats(request):
+  chats = Chat.objects.filter(Q(buyer=request.user) | Q(seller=request.user))
+
+  return render(request, 'core/chats.html', {
+     'chats': chats
+  })

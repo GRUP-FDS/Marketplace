@@ -7,11 +7,11 @@
     <div class="grid grid-cols-2 gap-2 mb-2">
       <div>
         <label for="marca" class="block text-sm">Marca:</label>
-        <input type="text" id="marca" name="marca" class="w-full border border-gray-300 rounded-sm px-2 py-1 text-sm">
+        <input id="filter_brand" type="text" id="marca" name="marca" class="w-full border border-gray-300 rounded-sm px-2 py-1 text-sm">
       </div>
       <div>
         <label for="modelo" class="block text-sm">Modelo:</label>
-        <input type="text" id="modelo" name="modelo" class="w-full border border-gray-300 rounded-sm px-2 py-1 text-sm">
+        <input id="filter-model" type="text" id="modelo" name="modelo" class="w-full border border-gray-300 rounded-sm px-2 py-1 text-sm">
       </div>
     </div>
     
@@ -48,7 +48,7 @@
       </div>
     </div>
     
-    <button type="submit" class="bg-blue-500 text-white py-1 px-2 rounded-sm text-sm">Filtrar</button>
+    <button id="botao_filtrar" type="submit" class="bg-blue-500 text-white py-1 px-2 rounded-sm text-sm">Filtrar</button>
   </form>
   
 
@@ -60,13 +60,13 @@
         <div class="grid grid-cols-1 gap-x-6 gap-y-10 sm:grid-cols-2 lg:grid-cols-3">
             {% for car in cars %}
             <div>
-                <a href="{% url 'carros:pdp' car.id %}">
+                <a id='descricao-carro' href="{% url 'carros:pdp' car.id %}">
                     <div>
                         <img src="{{ car.image.url }}" class="rounded-t-xl w-full h-[400px]">
                     </div>
 
                     <div class="p-6 bg-white rounded-b-xl">
-                        <h2 class="text-xl">{{ car.brand }} {{ car.car_model }}</h2>
+                        <h2 id="nome_carro" class="text-xl">{{ car.brand }} {{ car.car_model }}</h2>
                         <p class="text-black-500 mt-10 text-3xl text-bold">R$ {{ car.price }}</p>
                         <div class="w-full flex justify-between mt-2">
                             <span class="text-gray-400">{{ car.year }}</span>
