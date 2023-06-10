@@ -5,7 +5,7 @@
   <div class="text-center mb-4">
     <h1 class="text-2xl lg:text-3xl text-black">{{ car.name }}</h1>
     {% if request.user == car.created_by %}
-      <p class="text-black mt-2">Você está vendendo esse produto.</p>
+      <p id="vendedagem" class="text-black mt-2">Você está vendendo esse produto.</p>
     {% else %}
       <p class="text-black mt-2">Vendedor: {{ car.created_by.username }}</p>
     {% endif %}

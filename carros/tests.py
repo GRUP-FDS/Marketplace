@@ -59,8 +59,8 @@ class MySeleniumTest(LiveServerTestCase):
         browser.find_element(By.ID,'logar').click()
         input_user = browser.find_element(By.ID,'user')
         input_senha = browser.find_element(By.ID,'senha')
-        input_user.send_keys('brunaamademais')
-        input_senha.send_keys('blackthigas')
+        input_user.send_keys('BruncaCarvalho')
+        input_senha.send_keys('bruna123')
         browser.find_element(By.ID,'login-registrar').click()
         sleep(3)
 
@@ -125,8 +125,8 @@ class MySeleniumTest(LiveServerTestCase):
         browser.find_element(By.ID,'logar').click()
         input_user = browser.find_element(By.ID,'user')
         input_senha = browser.find_element(By.ID,'senha')
-        input_user.send_keys('brunaamademais')
-        input_senha.send_keys('blackthigas')
+        input_user.send_keys('BrunaCarvalho')
+        input_senha.send_keys('bruna123')
         browser.find_element(By.ID,'login-registrar').click()
         browser.find_element(By.ID,'botao-meus-anuncios').click()
         sleep(3)
@@ -143,8 +143,8 @@ class MySeleniumTest(LiveServerTestCase):
         browser.find_element(By.ID,'logar').click()
         input_user = browser.find_element(By.ID,'user')
         input_senha = browser.find_element(By.ID,'senha')
-        input_user.send_keys('brunaamademais')
-        input_senha.send_keys('blackthigas')
+        input_user.send_keys('BrunaCarvalho')
+        input_senha.send_keys('bruna123')
         browser.find_element(By.ID,'login-registrar').click()
         browser.find_element(By.ID,'home').click()
         sleep(3)
@@ -295,8 +295,33 @@ class MySeleniumTest(LiveServerTestCase):
 
         descricao_descricao = browser.find_element(By.ID,'descricao_descricao')
         assert descricao_descricao.text == 'Atualização do campo de descrição'
-
         #------------------------------------------------------------------------------------------------------------#
+
+    def minhas_conversas(self):
+        browser = set_Up()
+        browser.get('http://127.0.0.1:8000/')
+        browser.find_element(By.ID,'logar').click()
+        input_user = browser.find_element(By.ID,'user')
+        input_senha = browser.find_element(By.ID,'senha')
+        input_user.send_keys('BrunaCarvalho')
+        input_senha.send_keys('bruna123')
+        browser.find_element(By.ID,'login-registrar').click()
+        sleep(3)
+
+        browser.find_element(By.ID,'minhas-conversas').click()
+        browser.find_element(By.ID,'conversante').click()
+        sleep(2)
+
+        input_mensagem = browser.find_element(By.ID,'chat-message-input')
+        sleep(1)
+        input_mensagem.send_keys('oioioi')
+        sleep(2)
+
+        mensagem_exemplo = browser.find_element(By.ID,'mensagem_exemplo')
+        assert mensagem_exemplo.text == 'oioioi'
+
+
+        
 
     #def tearDown(self):
         #browser = set_Up()
