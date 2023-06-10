@@ -6,16 +6,12 @@ from selenium.webdriver.chrome.options import Options
 from selenium.webdriver.common.by import By
 
 
-class MySeleniumTest(LiveServerTestCase):
-    
-    chrome_options = Options()
-    chrome_options.add_argument("--remote-debugging-port=8000") 
-    def set_Up():
+def set_Up():
         chrome_options = webdriver.ChromeOptions()
         chrome_options.add_argument('--icognito') 
         browser = webdriver.Chrome(options=chrome_options)
         browser.maximize_window()
-        return browser
+        return browser   
 
 class MySeleniumTest(LiveServerTestCase):
         # ... continue com as interações e validações na página web
@@ -281,7 +277,7 @@ class MySeleniumTest(LiveServerTestCase):
         
         #------------------------------------------------------------------------------------------------------------#
 
-    def tearDown(self):
-        browser = set_Up()
-        selenium.quit()
-        super().tearDown()
+    #def tearDown(self):
+        #browser = set_Up()
+        #selenium.quit()
+        #super().tearDown()
