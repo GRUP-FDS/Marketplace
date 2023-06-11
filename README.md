@@ -67,7 +67,7 @@ A aplicação da técnica do pair programming tem sido muito útil não só para
 			Edmar Alencar
 			<br />
 			era@cesar.school
-			<img src="https://media.licdn.com/dms/image/C4E03AQEFK6fdcQMefw/profile-displayphoto-shrink_800_800/0/1624675296129?e=1683763200&v=beta&t=AlBtEwGySnzL7tOmRARj59FRpsJOsAyim6--M8u6j48" width=200>
+			<img src="https://media.licdn.com/dms/image/C4E03AQEFK6fdcQMefw/profile-displayphoto-shrink_800_800/0/1624675296129?e=1692230400&v=beta&t=NiBwDweXHdcqlgOSYAZ8g9R67y8AextsplwC2QdQPeU" width=200>
 	    </td>
 	    <td>
 			Letícia Paoleschi
@@ -87,19 +87,19 @@ A aplicação da técnica do pair programming tem sido muito útil não só para
 			Guilherme Lopes 
 			<br />
 			glo@cesar.school
-			<img src="https://media.licdn.com/dms/image/D4D35AQEbX5ogC2YVRg/profile-framedphoto-shrink_800_800/0/1642452377945?e=1682337600&v=beta&t=OfnIsp0U2HXK3rntw7VJGr4zfzW5s_R95_kJLzdz22E" width=200>
+			<img src="https://media.licdn.com/dms/image/D4D35AQEbX5ogC2YVRg/profile-framedphoto-shrink_800_800/0/1642452377945?e=1687129200&v=beta&t=xK01gdfJ1jy6el9f-SZia1aVAb8bU19IvQkNGaCen94" width=200>
 	    </td>
 	    <td>
 			Arthur Reis
 			<br />
 			aars@cesar.school
-			<img src="https://media.licdn.com/dms/image/C5603AQFTj-iywraEpA/profile-displayphoto-shrink_400_400/0/1659486596346?e=1683763200&v=beta&t=dBxERUoBO8xZ6ybl1kEKmTWjTqlXgIIoJfG7p1AyEV8" width=200>
+			<img src="https://media.licdn.com/dms/image/C5603AQFTj-iywraEpA/profile-displayphoto-shrink_800_800/0/1659486596346?e=1692230400&v=beta&t=uzSST0hOE2_SX98Pm_aXT-KJA2jg5n87AE3gBakSTIU" width=200>
 	    </td>
 	    <td>
 			Camila Cirne
 			<br />
 			ccpo@cesar.school
-			<img src="https://media.licdn.com/dms/image/C4E03AQE-tWOrfhxn8w/profile-displayphoto-shrink_400_400/0/1606089299286?e=1683763200&v=beta&t=0Lh_w-Qjgh7cQD2J6R4QqJGtF5irPJHrlOIltTMDnqI" width=200>
+			<img src="https://media.licdn.com/dms/image/C4E03AQE-tWOrfhxn8w/profile-displayphoto-shrink_800_800/0/1606089299286?e=1692230400&v=beta&t=3qT3PqRYfWszVY0NYK9P-k2me0kCTalSKEAokyK0tzI" width=200>
 	    </td>
   </tr>
  </table>
