@@ -25,11 +25,11 @@ Senha: user123456
 ## Diagrama de atividades do sistema
 <p>Você pode ver o diagrama de atividades do nosso sistema clicando <a href="https://lucid.app/lucidchart/b573088d-627c-4a7d-b71f-9789e1a6488b/edit?viewport_loc=-1621%2C-622%2C5414%2C3123%2C0_0&invitationId=inv_d87bf4ec-e718-423c-93ed-49f4ed8fbdff">aqui</a>.</p>
 
-## SCREAMCAST
+## SCREENCAST
 <p>Assista <a href="https://youtu.be/M-mF4aDxeW4](https://www.youtube.com/watch?v=2qGJ8Jv_7F4&t=23s">aqui</a> o vídeo da primeira entrega.</p>
 <p>Assista <a href="https://youtu.be/M-mF4aDxeW4">aqui</a> o vídeo da segunda entrega.</p>
 
-## VIDEOS DA TERCEIRA ENTREGA
+## SCREENCAST DA TERCEIRA ENTREGA
 
 <p> Assista <a href="https://share.vidyard.com/watch/qXoAUsxGUoBkSVgHyQVvGS?">aqui</a> o vídeo com as novas histórias adicionadas no protótipo de baixa.</p>
 
@@ -39,9 +39,20 @@ Senha: user123456
 
 <p> Assista <a href="https://share.vidyard.com/watch/33U7XQHhMjnc1JEBL7Vb8N">aqui</a> o vídeo dos testes automatizados.</p>
 
+## SCREENCAST DA QUARTA ENTREGA
+
+<p> Assista <a href=" ">aqui</a> o vídeo com as novas histórias adicionadas no protótipo de baixa.</p>
+
+<p> Assista <a href="">aqui</a> o vídeo com as novas histórias adicionadas no site na aws.</p>
+
+<p> Assista <a href="">aqui</a> o vídeo dos testes automatizados.</p>
+
+<p> Assista <a href="">aqui</a> o vídeo do build e deploymente automatizado</p>
+
+
 
 ## Nossa experiência utilizando o pair programming 
-A aplicação da técnica do pair programming tem sido muito útil não só para os benefícios padrões já identificados, como redução de erro no código, mas também para um estudo da tecnologia django em conjunto e na prática com a dupla. Na maior parte do tempo a programação em pares tem sido aplicada de forma online, onde o programador piloto compartilha a tela do código para que a sua dupla possa visualizar e ir acompanhando na construção do código. É uma prática produtiva principalmente para busca de soluções no código em que duraria mais tempo com apenas um desenvolvedor. O uso dessa técnica foi feita nessa entrega inicial pelos seguintes pares: Bruna Carvalho e Letícia Pinheiro; Guilherme Lopes e Camila Cirne; Edmar Alencar e Arthur Reis. Na Sprint 3, ocorreu uma mudança de pares: Bruna Carvalho e Arthur Reis; Letícia Pinheiro e Guilherme Lopes; Edmar Alencar e Camila Cirne.
+A aplicação da técnica do pair programming tem sido muito útil não só para os benefícios padrões já identificados, como redução de erro no código, mas também para um estudo da tecnologia django em conjunto e na prática com a dupla. Na maior parte do tempo a programação em pares tem sido aplicada de forma online, onde o programador piloto compartilha a tela do código para que a sua dupla possa visualizar e ir acompanhando na construção do código. É uma prática produtiva principalmente para busca de soluções no código em que duraria mais tempo com apenas um desenvolvedor. O uso dessa técnica foi feita nessa entrega inicial pelos seguintes pares: Bruna Carvalho e Letícia Pinheiro; Guilherme Lopes e Camila Cirne; Edmar Alencar e Arthur Reis. Na sprint 2, ocorreu uma mudança de pares: Bruna Carvalho e Arthur Reis; Letícia Pinheiro e Guilherme Lopes; Edmar Alencar e Camila Cirne. Na sprint 3, ocorreu o último rodízio de pares: Bruna Carvalho e Camila Cirne; Letícia Pinheiro e Arthur Reis; Edmar Alencar e Guilherme Lopes.
 
 ## Equipe
 
