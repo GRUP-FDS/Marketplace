@@ -25,8 +25,10 @@ Senha: user123456
 ## Diagrama de atividades do sistema
 <p>Você pode ver o diagrama de atividades do nosso sistema clicando <a href="https://lucid.app/lucidchart/b573088d-627c-4a7d-b71f-9789e1a6488b/edit?viewport_loc=-1621%2C-622%2C5414%2C3123%2C0_0&invitationId=inv_d87bf4ec-e718-423c-93ed-49f4ed8fbdff">aqui</a>.</p>
 
-## SCREENCAST
+## SCREENCAST DA PRIMEIRA ENTREGA
 <p>Assista <a href="https://youtu.be/M-mF4aDxeW4](https://www.youtube.com/watch?v=2qGJ8Jv_7F4&t=23s">aqui</a> o vídeo da primeira entrega.</p>
+
+## SCREENCAST DA SEGUNDA ENTREGA
 <p>Assista <a href="https://youtu.be/M-mF4aDxeW4">aqui</a> o vídeo da segunda entrega.</p>
 
 ## SCREENCAST DA TERCEIRA ENTREGA
