@@ -1,7 +1,8 @@
 {% extends 'core/base.html' %}
 
 {% block content %}
-  <div class="container mx-auto mt-8">
+<div class="mx-auto px-6 max-w-7xl my-10">
+
     <h2 id="confirmar_anuncio" class="text-2xl font-bold mb-4">Meus anúncios</h2>
     {% if cars %}
       <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
@@ -48,26 +49,25 @@
                 </div>
                 </div>
                 </div>
-                </div>
-                </div>
-                {% endfor %}
-                {% else %}
-                <p id="mensagem_sem_anuncio">Você ainda não tem nenhum anúncio. <a href="#">Crie um agora</a>.</p>
-                {% endif %}
-                
-                  </div>
-                {% endblock %}
-                {% block scripts %}
-                
-                <script>
-                  function openModal(id) {
-                    const modal = document.getElementById(id);
-                    modal.classList.remove('hidden');
-                  }
-                
-                  function closeModal(id) {
-                    const modal = document.getElementById(id);
-                    modal.classList.add('hidden');
-                  }
-                </script>
-                {% endblock %}
+          </div>
+        {% endfor %}
+      </div>
+    {% else %}
+    <p id="mensagem_sem_anuncio">Você ainda não tem nenhum anúncio. <a href="#">Crie um agora</a>.</p>
+    {% endif %}        
+</div>
+{% endblock %}
+
+{% block scripts %}
+<script>
+  function openModal(id) {
+    const modal = document.getElementById(id);
+    modal.classList.remove('hidden');
+  }
+
+  function closeModal(id) {
+    const modal = document.getElementById(id);
+    modal.classList.add('hidden');
+  }
+</script>
+{% endblock %}

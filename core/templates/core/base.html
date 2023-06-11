@@ -11,7 +11,7 @@
 </head>
 <body class="bg-[#ECEDF2]">
   <header class="bg-white">
-    <nav class="flex items-center justify-between py-4 px-6 max-w-7xl mx-auto">
+    <nav class="flex flex-col gap-4 items-start md:gap-0 md:flex-row md:items-center md:justify-between py-4 px-6 max-w-7xl mx-auto">
       <a id="home"href="/" class="text-xl text-black">CarTradeo</a>
       <div>
         {% if request.user.is_authenticated %}
