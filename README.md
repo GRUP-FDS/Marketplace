@@ -81,7 +81,7 @@ A aplicação da técnica do pair programming tem sido muito útil não só para
 	    <td>
 			Guilherme Lopes 
 			<br />
-			glo@gmail.com
+			glo@cesar.school
 			<img src="https://media.licdn.com/dms/image/D4D35AQEbX5ogC2YVRg/profile-framedphoto-shrink_800_800/0/1642452377945?e=1682337600&v=beta&t=OfnIsp0U2HXK3rntw7VJGr4zfzW5s_R95_kJLzdz22E" width=200>
 	    </td>
 	    <td>
