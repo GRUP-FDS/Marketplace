@@ -6,7 +6,7 @@
 
 <div class="max-w-7xl mx-auto px-6 mt-10">
   <!-- Image gallery -->
-  <div class="grid grid-cols-2 gap-4">
+  <div class="flex flex-col my-4 md:my-0 md:grid md:grid-cols-2 gap-4">
     <img src="{{ car.image.url }}" alt="{{ car.car_model }}" class="w-full h-full max-h-[500px]">
     <div>
       <h1 class="text-2xl font-bold tracking-tight text-gray-900 sm:text-3xl">{{car.brand}} {{car.car_model}}</h1>
@@ -49,12 +49,11 @@
       </div>
 
       {% if request.user == car.created_by %}
-      <span class="mt-20 text-lg">Você é o dono desse anúncio.</span>
+        <span class="mt-20 text-lg">Você é o dono desse anúncio.</span>
       {% else %}
       <a href="{% url 'chat:detail' car.id %}?buyer={{ request.user.username }}" target="_self"
         class="block mt-10 text-base text-center text-white bg-sky-500 hover:bg-sky-600 transition-colors px-4 py-3 w-full rounded-lg">Entrar
         em contato</a>
-        <a id="botao_entrar_contato" href="{% url 'chat:detail' car.id %}?buyer={{ request.user.username }}" target="_self" class="block mt-10 text-base text-center text-white bg-sky-500 hover:bg-sky-600 transition-colors px-4 py-3 w-full rounded-lg">Entrar em contato</a>
       {% endif %}
 
       {% load static %}
@@ -71,7 +70,7 @@
 
       <!-- Adição da tag vermelha para carros vendidos -->
       {% if car.is_sold %}
-      <span id="vendido" mt-4 px-2 py-1 text-xs text-white bg-red-500 rounded-full">Vendido</span>
+      <span id="vendido" class="mt-4 px-2 py-1 text-xs text-white bg-red-500 rounded-full">Vendido</span>
       {% endif %}
 
     </div>
