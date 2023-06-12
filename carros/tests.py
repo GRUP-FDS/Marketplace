@@ -6,15 +6,30 @@ from selenium.webdriver.chrome.options import Options
 from selenium.webdriver.common.by import By
 
 
+# #def setUp():
+#       #  chrome_options = webdriver.ChromeOptions()
+#        # chrome_options.add_argument('--icognito') 
+#         #chrome_options.add_argument('--headless') 
+#         #chrome_options.add_argument("--no-sandbox")
+#         #chrome_options.add_argument("--disable-gpu")
+#         browser = webdriver.Chrome(options=chrome_options)
+#         browser.maximize_window()
+#         return browser   
+
 def setUp():
-        chrome_options = webdriver.ChromeOptions()
-        chrome_options.add_argument('--icognito') 
-        chrome_options.add_argument('--headless') 
-        #chrome_options.add_argument("--no-sandbox")
-        #chrome_options.add_argument("--disable-gpu")
-        browser = webdriver.Chrome(options=chrome_options)
-        browser.maximize_window()
-        return browser   
+    # Configura o display virtual
+    display = Display(visible=0, size=(1920, 1080))
+    display.start()
+
+    chrome_options = webdriver.ChromeOptions()
+    chrome_options.add_argument('--no-sandbox')
+    chrome_options.add_argument('--disable-dev-shm-usage')
+    chrome_options.add_argument('--headless')
+    chrome_options.add_argument('--disable-gpu')
+
+    browser = webdriver.Chrome(options=chrome_options)
+    browser.maximize_window()
+    return browser
 
 class MySeleniumTest(LiveServerTestCase):
         # ... continue com as interações e validações na página web
