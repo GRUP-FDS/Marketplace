@@ -10,17 +10,15 @@ def setUp():
         chrome_options = webdriver.ChromeOptions()
         chrome_options.add_argument('--icognito') 
         chrome_options.add_argument('--headless') 
-        chrome_options.add_argument("--no-sandbox")
-        chrome_options.add_argument("--disable-gpu")
+        #chrome_options.add_argument("--no-sandbox")
+        #chrome_options.add_argument("--disable-gpu")
         browser = webdriver.Chrome(options=chrome_options)
         browser.maximize_window()
         return browser   
 
-
 class MySeleniumTest(LiveServerTestCase):
         # ... continue com as interações e validações na página web
     def test_cadastrar(self):
-
         browser = setUp()
         browser.get('http://127.0.0.1:8000/')
         browser.find_element(By.ID,'logar').click()
