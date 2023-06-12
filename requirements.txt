@@ -4,4 +4,3 @@ Pillow==9.5.0
 sqlparse==0.4.3
 channels==3.0.5
 selenium==4.9.1
-pyvirtualdisplay==2.2.0
