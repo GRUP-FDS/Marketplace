@@ -9,6 +9,7 @@ from selenium.webdriver.common.by import By
 def set_Up():
         chrome_options = webdriver.ChromeOptions()
         chrome_options.add_argument('--icognito') 
+        chrome_options.add_argument('--headless') 
         browser = webdriver.Chrome(options=chrome_options)
         browser.maximize_window()
         return browser   
