@@ -10,6 +10,8 @@ def set_Up():
         chrome_options = webdriver.ChromeOptions()
         chrome_options.add_argument('--icognito') 
         chrome_options.add_argument('--headless') 
+        chrome_options.add_argument("--no-sandbox")
+        chrome_options.add_argument("--disable-gpu")
         browser = webdriver.Chrome(options=chrome_options)
         browser.maximize_window()
         return browser   
@@ -274,7 +276,7 @@ class MySeleniumTest(LiveServerTestCase):
 
 
         #------------------------------------------------------------------------------------------------------------#
-    def atualizar_produto(self): 
+    def test_atualizar_produto(self): 
         browser = set_Up()
         browser.get('http://127.0.0.1:8000/')
         browser.find_element(By.ID,'logar').click()
@@ -298,7 +300,7 @@ class MySeleniumTest(LiveServerTestCase):
         assert descricao_descricao.text == 'Atualização do campo de descrição'
         #------------------------------------------------------------------------------------------------------------#
 
-    def minhas_conversas(self):
+    def test_minhas_conversas(self):
         browser = set_Up()
         browser.get('http://127.0.0.1:8000/')
         browser.find_element(By.ID,'logar').click()
