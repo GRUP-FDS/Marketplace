@@ -17,9 +17,6 @@ from pyvirtualdisplay import Display
 #         return browser   
 
 def setUp():
-    # Configura o display virtual
-    display = Display(visible=0, size=(1920, 1080))
-    display.start()
 
     chrome_options = webdriver.ChromeOptions()
     chrome_options.add_argument('--no-sandbox')
