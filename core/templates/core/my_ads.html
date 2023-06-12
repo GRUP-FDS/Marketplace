@@ -23,6 +23,8 @@
                 <input type="hidden" name="_method" value="DELETE">
                 <button id="delete_my_ads" type="button" onclick="openModal('delete-modal-{{ car.pk }}')" class="inline-block bg-gray-200 rounded-full px-3 py-1 text-sm font-semibold text-gray-700 mr-2 mb-2 hover:bg-gray-300">Deletar Anúncio</button>
               </form>
+              {% else %}
+                <span class="bg-red-500 p-2 text-white rounded-full text-xs">Vendido</span>
               {% endif %}
             </div>
           </div>
