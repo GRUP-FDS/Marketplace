@@ -14,9 +14,9 @@
               <img src="{{ chat.car.image.url }}" class="rounded-t-xl h-[150px]">
             </div>
 
-            <div class="p-4 bg-white rounded-b-xl"> 
+            <div class="p-4 bg-white rounded-b-xl" id="oi"> 
               <h2 class="text-2xl mb-3">{{ chat.car.name }}</h2>
-              <p id="conversante">
+              <p >
                 {% if request.user == chat.buyer %}
                   Vendedor: {{ chat.seller.username }}
                 {% else %}
