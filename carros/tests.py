@@ -4,16 +4,13 @@ from selenium import webdriver
 from selenium.webdriver.chrome.options import Options
 from selenium.webdriver.common.by import By
 from urllib3.util import Timeout
-from selenium.webdriver.support.ui import WebDriverWait
-from selenium.webdriver.support import expected_conditions as EC
-from selenium.webdriver.support.select import Select
+
 
 def setUp():
-    chrome_options = webdriver.ChromeOptions()
-    chrome_options.add_argument('--icognito')
+    chrome_options = Options()
+    chrome_options.add_argument('--incognito')
     chrome_options.add_argument('--headless')
     driver = webdriver.Chrome(options=chrome_options)
-    driver.maximize_window()
 
     return driver
 
