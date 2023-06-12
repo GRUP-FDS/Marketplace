@@ -34,6 +34,7 @@ def setUp():
 class MySeleniumTest(LiveServerTestCase):
         # ... continue com as interações e validações na página web
     def test_cadastrar(self):
+        display.start()
         browser = setUp()
         browser.get('http://127.0.0.1:8000/')
         browser.find_element(By.ID,'logar').click()
@@ -52,6 +53,7 @@ class MySeleniumTest(LiveServerTestCase):
 
         #------------------------------------------------------------------------------------------------------------#
     def test_logar(self):
+        display.start()
         sleep(3)
         browser = setUp()
         browser.get('http://127.0.0.1:8000/')
@@ -68,7 +70,7 @@ class MySeleniumTest(LiveServerTestCase):
         assert botao_sair.text == "Sair"
         #------------------------------------------------------------------------------------------------------------#
     def test_criar_anuncio(self):
-        
+        display.start()
         browser = setUp()
         browser.get('http://127.0.0.1:8000/')
         sleep(3)
@@ -119,6 +121,7 @@ class MySeleniumTest(LiveServerTestCase):
 
 
     def test_pesquisar_anuncio(self):
+        display.start()
         sleep(3)
         browser = setUp()
         browser.get('http://127.0.0.1:8000/')
@@ -135,6 +138,7 @@ class MySeleniumTest(LiveServerTestCase):
  
         #------------------------------------------------------------------------------------------------------------#
     def test_visualizar_anuncio(self):
+        display.start()
         sleep(3)
         browser = setUp()
         browser.get('http://127.0.0.1:8000/')
@@ -152,6 +156,7 @@ class MySeleniumTest(LiveServerTestCase):
         #------------------------------------------------------------------------------------------------------------#
 
     def test_chat_online(self):
+        display.start()
 
         browser = setUp()
         browser.get('http://127.0.0.1:8000/')
@@ -184,7 +189,7 @@ class MySeleniumTest(LiveServerTestCase):
 
     
     def test_deleter_anuncio(self):
-        
+        display.start()
         browser = setUp() 
         browser.get('http://127.0.0.1:8000/')
         browser.find_element(By.ID,'logar').click()
@@ -236,6 +241,7 @@ class MySeleniumTest(LiveServerTestCase):
 
         #------------------------------------------------------------------------------------------------------------#
     def test_anuncio_vendido(self):
+        display.start()
 
         browser = setUp()
         browser.get('http://127.0.0.1:8000/')
@@ -290,6 +296,7 @@ class MySeleniumTest(LiveServerTestCase):
 
         #------------------------------------------------------------------------------------------------------------#
     def test_atualizar_produto(self): 
+        display.start()
         browser = setUp()
         browser.get('http://127.0.0.1:8000/')
         browser.find_element(By.ID,'logar').click()
@@ -314,6 +321,7 @@ class MySeleniumTest(LiveServerTestCase):
         #------------------------------------------------------------------------------------------------------------#
 
     def test_minhas_conversas(self):
+        display.start()
         browser = setUp()
         browser.get('http://127.0.0.1:8000/')
         browser.find_element(By.ID,'logar').click()
