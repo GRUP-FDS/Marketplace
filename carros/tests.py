@@ -6,7 +6,7 @@ from selenium.webdriver.chrome.options import Options
 from selenium.webdriver.common.by import By
 
 
-def set_Up():
+def setUp():
         chrome_options = webdriver.ChromeOptions()
         chrome_options.add_argument('--icognito') 
         chrome_options.add_argument('--headless') 
@@ -21,7 +21,7 @@ class MySeleniumTest(LiveServerTestCase):
         # ... continue com as interações e validações na página web
     def test_cadastrar(self):
 
-        browser = set_Up()
+        browser = setUp()
         browser.get('http://127.0.0.1:8000/')
         browser.find_element(By.ID,'logar').click()
         browser.find_element(By.ID,'registrar').click()
@@ -40,7 +40,7 @@ class MySeleniumTest(LiveServerTestCase):
         #------------------------------------------------------------------------------------------------------------#
     def test_logar(self):
         sleep(3)
-        browser = set_Up()
+        browser = setUp()
         browser.get('http://127.0.0.1:8000/')
         browser.find_element(By.ID,'logar').click()
         input_user = browser.find_element(By.ID,'user')
@@ -56,7 +56,7 @@ class MySeleniumTest(LiveServerTestCase):
         #------------------------------------------------------------------------------------------------------------#
     def test_criar_anuncio(self):
         
-        browser = set_Up()
+        browser = setUp()
         browser.get('http://127.0.0.1:8000/')
         sleep(3)
         browser.find_element(By.ID,'logar').click()
@@ -107,7 +107,7 @@ class MySeleniumTest(LiveServerTestCase):
 
     def test_pesquisar_anuncio(self):
         sleep(3)
-        browser = set_Up()
+        browser = setUp()
         browser.get('http://127.0.0.1:8000/')
         browser.find_element(By.ID,'filtros').click()
         input_filter_brand = browser.find_element(By.ID,'filter_brand')
@@ -123,7 +123,7 @@ class MySeleniumTest(LiveServerTestCase):
         #------------------------------------------------------------------------------------------------------------#
     def test_visualizar_anuncio(self):
         sleep(3)
-        browser = set_Up()
+        browser = setUp()
         browser.get('http://127.0.0.1:8000/')
         browser.find_element(By.ID,'logar').click()
         input_user = browser.find_element(By.ID,'user')
@@ -140,7 +140,7 @@ class MySeleniumTest(LiveServerTestCase):
 
     def test_chat_online(self):
 
-        browser = set_Up()
+        browser = setUp()
         browser.get('http://127.0.0.1:8000/')
         sleep(3)
         browser.find_element(By.ID,'logar').click()
@@ -172,7 +172,7 @@ class MySeleniumTest(LiveServerTestCase):
     
     def test_deleter_anuncio(self):
         
-        browser = set_Up() 
+        browser = setUp() 
         browser.get('http://127.0.0.1:8000/')
         browser.find_element(By.ID,'logar').click()
         input_user = browser.find_element(By.ID,'user')
@@ -224,7 +224,7 @@ class MySeleniumTest(LiveServerTestCase):
         #------------------------------------------------------------------------------------------------------------#
     def test_anuncio_vendido(self):
 
-        browser = set_Up()
+        browser = setUp()
         browser.get('http://127.0.0.1:8000/')
         sleep(3)
         browser.find_element(By.ID,'logar').click()
@@ -277,7 +277,7 @@ class MySeleniumTest(LiveServerTestCase):
 
         #------------------------------------------------------------------------------------------------------------#
     def test_atualizar_produto(self): 
-        browser = set_Up()
+        browser = setUp()
         browser.get('http://127.0.0.1:8000/')
         browser.find_element(By.ID,'logar').click()
         input_user = browser.find_element(By.ID,'user')
@@ -301,7 +301,7 @@ class MySeleniumTest(LiveServerTestCase):
         #------------------------------------------------------------------------------------------------------------#
 
     def test_minhas_conversas(self):
-        browser = set_Up()
+        browser = setUp()
         browser.get('http://127.0.0.1:8000/')
         browser.find_element(By.ID,'logar').click()
         input_user = browser.find_element(By.ID,'user')

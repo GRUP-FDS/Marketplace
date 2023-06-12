@@ -25,7 +25,7 @@ SECRET_KEY = 'django-insecure-wfc@w8cj_#)w%y%k0z00s7tl!nr!wg6d#0o%$wfkr^1t6+591(
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['127.0.0.1']
+ALLOWED_HOSTS = ['127.0.0.1', 'marketplace123.sa-east-1.elasticbeanstalk.com']
 
 LOGOUT_REDIRECT_URL = '/'
 LOGIN_REDIRECT_URL = '/'
