@@ -15,7 +15,7 @@ def set_Up():
         browser = webdriver.Chrome(options=chrome_options)
         browser.maximize_window()
         return browser   
-
+#teste
 
 class MySeleniumTest(LiveServerTestCase):
         # ... continue com as interações e validações na página web
