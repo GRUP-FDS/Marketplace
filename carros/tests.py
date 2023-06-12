@@ -4,13 +4,18 @@ from selenium import webdriver
 from selenium.webdriver.chrome.options import Options
 from selenium.webdriver.common.by import By
 from urllib3.util import Timeout
-
+from selenium.webdriver.common.desired_capabilities import DesiredCapabilities
 
 def setUp():
     chrome_options = Options()
     chrome_options.add_argument('--incognito')
     chrome_options.add_argument('--headless')
-    driver = webdriver.Chrome(options=chrome_options)
+
+    capabilities = DesiredCapabilities.CHROME.copy()
+    capabilities['timeouts'] = {'implicit': 30000, 'pageLoad': 30000, 'script': 30000}
+
+    driver = webdriver.Chrome(options=chrome_options, desired_capabilities=capabilities)
+    driver.maximize_window()
 
     return driver
 
