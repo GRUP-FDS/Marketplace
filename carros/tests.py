@@ -5,7 +5,7 @@ from selenium.webdriver.chrome.options import Options
 from selenium.webdriver.common.by import By
 from urllib3.util import Timeout
 
-
+#testeagoravai
 def setUp():
     chrome_options = Options()
     chrome_options.add_argument('--incognito')
