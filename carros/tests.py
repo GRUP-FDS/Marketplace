@@ -4,16 +4,23 @@ from selenium import webdriver
 #from selenium.webdriver.chrome.options import Options
 from selenium.webdriver.common.by import By
 #from urllib3.util.timeout import Timeout
+from selenium.webdriver.support.ui import WebDriverWait
+from selenium.webdriver.support import expected_conditions as EC
 
 #atualização do selenium
 def setUp():
     chrome_options = webdriver.ChromeOptions()
     chrome_options.add_argument('--icognito')
     chrome_options.add_argument('--headless')
+    chrome_options.add_argument("--no-sandbox")
     #driver = webdriver.Chrome(options=chrome_options)
-    driver = webdriver.Chrome(options=chrome_options,timeout=10)
+    driver = webdriver.Chrome(options=chrome_options)
+    wait = WebDriverWait(driver, 10)  # Definindo timeout de 10 segundos
 
-    driver.maximize_window()
+    # Exemplo de espera até que um elemento esteja visível
+    element = wait.until(EC.visibility_of_element_located((By.ID, 'element_id')))
+
+    #driver.maximize_window()
 
     return driver
 
