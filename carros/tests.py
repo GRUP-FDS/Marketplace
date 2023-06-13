@@ -37,7 +37,7 @@ class MySeleniumTest(LiveServerTestCase):
         browser.find_element(By.ID,'logar').click()
         input_user = browser.find_element(By.ID,'user')
         input_senha = browser.find_element(By.ID,'senha')
-        input_user.send_keys('')
+        input_user.send_keys('BrunaCarvalho')
         sleep(3)
         input_senha.send_keys('bruna123')
         browser.find_element(By.ID,'login-registrar').click()
