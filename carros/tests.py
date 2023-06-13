@@ -58,7 +58,7 @@ class MySeleniumTest(LiveServerTestCase):
         sleep(3)
 
         
-        browser.find_element(By.ID,'criar-anuncio').click()
+        browser.find_element(By.ID, 'criar-anuncio').click()
         sleep(3)
         input_marca = browser.find_element(By.ID,'id_brand')
         input_model = browser.find_element(By.ID,'id_car_model')
@@ -144,7 +144,7 @@ class MySeleniumTest(LiveServerTestCase):
         sleep(2)
         browser.find_element(By.ID,'descricao-carro').click()
         sleep(2)
-        browser.find_element(By.ID,'botao_entrar_contato').click()
+        browser.find_element(By.ID,'entrar_contato').click()
         sleep(3)
         input_masseges = browser.find_element(By.ID,'chat-message-input')
         sleep(2)
@@ -222,7 +222,7 @@ class MySeleniumTest(LiveServerTestCase):
         sleep(3)
 
         
-        browser.find_element(By.ID,'criar-anuncios').click()
+        browser.find_element(By.ID, 'criar-anuncio').click()
         sleep(3)
         input_marca = browser.find_element(By.ID,'id_brand')
         input_model = browser.find_element(By.ID,'id_car_model')
