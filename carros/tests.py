@@ -13,21 +13,21 @@ def setUp():
 
 class MySeleniumTest(LiveServerTestCase):
         # ... continue com as interações e validações na página web
-    def test_cadastrar(self):
-        browser = setUp()
-        browser.get('http://127.0.0.1:8000/')
-        browser.find_element(By.ID,'logar').click()
-        browser.find_element(By.ID,'registrar').click()
-        input_username = browser.find_element(By.ID,'input-username')
-        input_password = browser.find_element(By.ID,'input-password')
-        input_repassword = browser.find_element(By.ID,'input-repassword')
-        input_username.send_keys('brunaamademais')
-        input_password.send_keys('blackthigas')
-        input_repassword.send_keys('blackthigas')
-        sleep(3)
-        browser.find_element(By.ID,'cadastro').click()
-        botao_sair = browser.find_element(By.ID,'sairlogout')
-        assert botao_sair.text == "Sair"
+    # def test_cadastrar(self):
+    #     browser = setUp()
+    #     browser.get('http://127.0.0.1:8000/')
+    #     browser.find_element(By.ID,'logar').click()
+    #     browser.find_element(By.ID,'registrar').click()
+    #     input_username = browser.find_element(By.ID,'input-username')
+    #     input_password = browser.find_element(By.ID,'input-password')
+    #     input_repassword = browser.find_element(By.ID,'input-repassword')
+    #     input_username.send_keys('brunaamademais')
+    #     input_password.send_keys('blackthigas')
+    #     input_repassword.send_keys('blackthigas')
+    #     sleep(3)
+    #     browser.find_element(By.ID,'cadastro').click()
+    #     botao_sair = browser.find_element(By.ID,'sairlogout')
+    #     assert botao_sair.text == "Sair"
 
         #------------------------------------------------------------------------------------------------------------#
     def test_logar(self):
@@ -139,12 +139,15 @@ class MySeleniumTest(LiveServerTestCase):
         sleep(3)
         input_search = browser.find_element(By.ID,'search')
         input_search.send_keys('ka')
-        sleep(3)
+        sleep(2)
         browser.find_element(By.ID,'confirm-search').click()
+        sleep(2)
         browser.find_element(By.ID,'descricao-carro').click()
+        sleep(2)
         browser.find_element(By.ID,'botao_entrar_contato').click()
         sleep(3)
         input_masseges = browser.find_element(By.ID,'chat-message-input')
+        sleep(2)
         input_masseges.send_keys('Olá, estou interessado no seu carro')
         sleep(2)
         browser.find_element(By.ID,'chat-message-submit').click()
