@@ -55,11 +55,11 @@ class MySeleniumTest(LiveServerTestCase):
         input_user.send_keys('BruncaCarvalho')
         input_senha.send_keys('bruna123')
         browser.find_element(By.ID,'login-registrar').click()
+        sleep(2)
+
+        browser.find_element(By.ID, 'criar_anuncio').click()
         sleep(3)
 
-        
-        browser.find_element(By.ID, 'criar-anuncio').click()
-        sleep(3)
         input_marca = browser.find_element(By.ID,'id_brand')
         input_model = browser.find_element(By.ID,'id_car_model')
         input_km = browser.find_element(By.ID,'id_mileage')
