@@ -35,6 +35,7 @@ class MySeleniumTest(LiveServerTestCase):
         browser = setUp()
         browser.get('http://127.0.0.1:8000/')
         browser.find_element(By.ID,'logar').click()
+        sleep(3)
         input_user = browser.find_element(By.ID,'user')
         input_senha = browser.find_element(By.ID,'senha')
         input_user.send_keys('BrunaCarvalho')
@@ -70,6 +71,7 @@ class MySeleniumTest(LiveServerTestCase):
         input_color = browser.find_element(By.ID,'id_color')
         input_image = browser.find_element(By.ID, 'id_image')   
         input_descricao = browser.find_element(By.ID,'id_description') 
+        sleep(2)
        
         #preenchendo campos
         input_marca.send_keys('Produto de Teste')
@@ -293,6 +295,7 @@ class MySeleniumTest(LiveServerTestCase):
         browser.find_element(By.ID,'logar').click()
         input_user = browser.find_element(By.ID,'user')
         input_senha = browser.find_element(By.ID,'senha')
+        sleep(2)
         input_user.send_keys('BrunaCarvalho')
         input_senha.send_keys('bruna123')
         browser.find_element(By.ID,'login-registrar').click()
