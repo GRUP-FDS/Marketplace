@@ -9,14 +9,10 @@ from selenium.webdriver.common.by import By
 #atualização do selenium
 def setUp():
     chrome_options = webdriver.ChromeOptions()
-    chrome_options.add_argument('--icognito')
-    chrome_options.add_argument('--headless')
+    chrome_options.add_argument('--incognito')
+    chrome_service_args = ['--silent']
+    driver = webdriver.Chrome(options=chrome_options, service_args=chrome_service_args)
     
-    #driver = webdriver.Chrome(options=chrome_options)
-    driver = webdriver.Chrome(options=chrome_options,timeout=10)
-  
-    driver.maximize_window()
-
     return driver
 
 class MySeleniumTest(LiveServerTestCase):
