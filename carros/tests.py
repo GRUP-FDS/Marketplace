@@ -5,13 +5,13 @@ from selenium import webdriver
 from selenium.webdriver.common.by import By
 #from urllib3.util.timeout import Timeout
 
-
+#atualização do selenium
 def setUp():
     chrome_options = webdriver.ChromeOptions()
     chrome_options.add_argument('--icognito')
     chrome_options.add_argument('--headless')
     #driver = webdriver.Chrome(options=chrome_options)
-    driver = webdriver.Chrome(options=chrome_options, timeout=10)
+    driver = webdriver.Chrome(options=chrome_options,timeout=10)
 
     driver.maximize_window()
 
