@@ -50,7 +50,7 @@ Senha: user123456
 
 <p> Assista <a href="https://share.vidyard.com/watch/xGTwsUpBFwu9JSJ8mQ4UX5?">aqui</a> o vídeo dos testes automatizados.</p>
 
-<p> Assista <a href="">aqui</a> o vídeo do build e deploymente automatizado</p>
+<p> Assista <a href="https://share.vidyard.com/watch/63hGdCHGDimNPR6P6Q1P7j?">aqui</a> o vídeo do build e deploymente automatizado</p>
 
 
 
