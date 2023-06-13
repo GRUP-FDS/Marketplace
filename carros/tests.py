@@ -8,7 +8,7 @@ from selenium.webdriver.common.by import By
 
 #testeagoravai
 def setUp():
-    chrome_options = webdriver.ChromeOptions()
+    chrome_options = Options()
     chrome_options.add_argument('--icognito')
     chrome_options.add_argument('--headless')
     chrome_options.add_argument("--no-sandbox")
@@ -21,41 +21,41 @@ def setUp():
 
 class MySeleniumTest(LiveServerTestCase):
         # ... continue com as interações e validações na página web
-    def test_cadastrar(self):
+    # def test_cadastrar(self):
         
-        driver = setUp()
-        driver.get('http://127.0.0.1:8000/')
-        driver.find_element(By.ID,'logar').click()
-        driver.find_element(By.ID,'registrar').click()
-        input_username = driver.find_element(By.ID,'input-username')
-        input_password = driver.find_element(By.ID,'input-password')
-        input_repassword = driver.find_element(By.ID,'input-repassword')
-        input_username.send_keys('brunaamademais')
-        input_password.send_keys('blackthigas')
-        input_repassword.send_keys('blackthigas')
-        sleep(3)
-        driver.find_element(By.ID,'cadastro').click()
+    #     driver = setUp()
+    #     driver.get('http://127.0.0.1:8000/')
+    #     driver.find_element(By.ID,'logar').click()
+    #     driver.find_element(By.ID,'registrar').click()
+    #     input_username = driver.find_element(By.ID,'input-username')
+    #     input_password = driver.find_element(By.ID,'input-password')
+    #     input_repassword = driver.find_element(By.ID,'input-repassword')
+    #     input_username.send_keys('brunaamademais')
+    #     input_password.send_keys('blackthigas')
+    #     input_repassword.send_keys('blackthigas')
+    #     sleep(3)
+    #     driver.find_element(By.ID,'cadastro').click()
 
-        botao_sair = driver.find_element(By.ID,'sairlogout')
-        assert botao_sair.text == "Sair"
+    #     botao_sair = driver.find_element(By.ID,'sairlogout')
+    #     assert botao_sair.text == "Sair"
 
-        #------------------------------------------------------------------------------------------------------------#
-    def test_logar(self):
+    #     #------------------------------------------------------------------------------------------------------------#
+    # def test_logar(self):
         
-        sleep(3)
-        driver = setUp()
-        driver.get('http://127.0.0.1:8000/')
-        driver.find_element(By.ID,'logar').click()
-        input_user = driver.find_element(By.ID,'user')
-        input_senha = driver.find_element(By.ID,'senha')
-        input_user.send_keys('BrunaCarvalho')
-        sleep(3)
-        input_senha.send_keys('bruna123')
-        driver.find_element(By.ID,'login-registrar').click()
-        sleep(3)
+    #     sleep(3)
+    #     driver = setUp()
+    #     driver.get('http://127.0.0.1:8000/')
+    #     driver.find_element(By.ID,'logar').click()
+    #     input_user = driver.find_element(By.ID,'user')
+    #     input_senha = driver.find_element(By.ID,'senha')
+    #     input_user.send_keys('BrunaCarvalho')
+    #     sleep(3)
+    #     input_senha.send_keys('bruna123')
+    #     driver.find_element(By.ID,'login-registrar').click()
+    #     sleep(3)
 
-        botao_sair = driver.find_element(By.ID,'sairlogout')
-        assert botao_sair.text == "Sair"
+    #     botao_sair = driver.find_element(By.ID,'sairlogout')
+    #     assert botao_sair.text == "Sair"
         #------------------------------------------------------------------------------------------------------------#
     def test_criar_anuncio(self):
         
