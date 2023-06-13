@@ -10,7 +10,9 @@ def setUp():
     chrome_options = webdriver.ChromeOptions()
     chrome_options.add_argument('--icognito')
     chrome_options.add_argument('--headless')
-    driver = webdriver.Chrome(options=chrome_options)
+    #driver = webdriver.Chrome(options=chrome_options)
+    driver = webdriver.Chrome(options=chrome_options, timeout=10)
+
     driver.maximize_window()
 
     return driver
