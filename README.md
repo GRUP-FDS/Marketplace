@@ -46,6 +46,8 @@ Senha: user123456
 
 ## Screencast da quarta entrega
 
+<p> Assista <a href="https://share.vidyard.com/watch/SjLRYQyBzcChoufeZWnrwq?">aqui</a> o vídeo com as novas histórias adicionadas no protótipo de baixa.</p>
+
 <p> Assista <a href="https://share.vidyard.com/watch/UmXBMeVRuYX9zvzsmcxkQr?">aqui</a> o vídeo com as novas histórias adicionadas no site na aws.</p>
 
 <p> Assista <a href="https://share.vidyard.com/watch/xGTwsUpBFwu9JSJ8mQ4UX5?">aqui</a> o vídeo dos testes automatizados.</p>
