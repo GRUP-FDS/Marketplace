@@ -301,7 +301,7 @@ class MySeleniumTest(LiveServerTestCase):
         browser.find_element(By.ID,'login-registrar').click()
         sleep(3)
 
-        browser.find_element(By.ID,'minhas-conversas').click()
+        browser.find_element(By.ID,'minhas_conversas').click()
         sleep(2)
         # browser.find_element(By.ID,'oi').click()
         # sleep(2)
