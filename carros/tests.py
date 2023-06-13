@@ -1,9 +1,10 @@
 from time import sleep
 from django.test import LiveServerTestCase
 from selenium import webdriver
-from selenium.webdriver.chrome.options import Options
+#from selenium.webdriver.chrome.options import Options
 from selenium.webdriver.common.by import By
-from urllib3.util.timeout import Timeout
+#from urllib3.util.timeout import Timeout
+
 
 def setUp():
     chrome_options = webdriver.ChromeOptions()
@@ -17,7 +18,6 @@ def setUp():
 class MySeleniumTest(LiveServerTestCase):
         # ... continue com as interações e validações na página web
     def test_cadastrar(self):
-        
         driver = setUp()
         driver.get('http://127.0.0.1:8000/')
         driver.find_element(By.ID,'logar').click()
@@ -65,18 +65,26 @@ class MySeleniumTest(LiveServerTestCase):
         driver.find_element(By.ID,'login-registrar').click()
         sleep(3)
 
-        
         driver.find_element(By.ID,'criar-anuncios').click()
-        sleep(3)
+        sleep(1)
         input_marca = driver.find_element(By.ID,'id_brand')
+        sleep(1)
         input_model = driver.find_element(By.ID,'id_car_model')
+        sleep(1)
         input_km = driver.find_element(By.ID,'id_mileage')
+        sleep(1)
         input_ano = driver.find_element(By.ID,'id_year')
+        sleep(1)
         input_combustivel = driver.find_element(By.ID,'id_fuel_type')
+        sleep(1)
         input_estado = driver.find_element(By.ID,'id_type')
+        sleep(1)
         input_price = driver.find_element(By.ID,'id_price')
+        sleep(1)
         input_color = driver.find_element(By.ID,'id_color')
+        sleep(1)
         input_image = driver.find_element(By.ID, 'id_image')   
+        sleep(1)
         input_descricao = driver.find_element(By.ID,'id_description') 
        
         #preenchendo campos
