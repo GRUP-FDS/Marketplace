@@ -34,12 +34,18 @@ jobs:
     - uses: nanasess/setup-chromedriver@v2
     - run: |
         chromedriver --url-base=/wd/hub &
+    - name: Set up test database
+      run: |
+        python manage.py migrate --database=test
+        python manage.py collectstatic --noinput
     - name: Run local Server
       run: |
         python manage.py runserver &
         sleep 5
+    - name: Run tests
+      run: |
         python manage.py test
-        
+
   deploy:
     needs: [build]
     runs-on: ubuntu-latest
@@ -73,5 +79,3 @@ jobs:
         version_label: 12348
         region: "sa-east-1"
         deployment_package: deploy.zip
-        
-    
