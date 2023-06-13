@@ -52,7 +52,13 @@ Senha: user123456
 
 <p> Assista <a href="https://share.vidyard.com/watch/xGTwsUpBFwu9JSJ8mQ4UX5?">aqui</a> o vídeo dos testes automatizados.</p>
 
-<p> Assista <a href="https://share.vidyard.com/watch/63hGdCHGDimNPR6P6Q1P7j?">aqui</a> o vídeo do build e deploymente automatizado</p>
+<p> Assista <a href="https://share.vidyard.com/watch/hkGdriBsig5tU8qkgUtcpb?">aqui</a> o vídeo do build e deploymente automatizado</p>
+
+<p> OBS!!!!!
+	A mensagem que deu no erro do deploy é a seguinte: "deploy
+Deployment failed: Version 12348 already exists. Either remove the "deployment_package" parameter to deploy existing version, or set the "use_existing_version_if_available" parameter to "true" to use existing version if it exists and deployment package if it doesn't"
+Isso quer dizer que realizei os testes e o deploy automatizado anteriormente e funcionou, como mostrado no vídeo. Entretanto, quando fui refazer o workfllow para realizar o screencast, ele deu como erro porque eu não modifiquei nenhum arquivo e o deploy já
+tinha sido realizado da forma correta.</p>
 
 
 
