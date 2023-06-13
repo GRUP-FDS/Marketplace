@@ -12,7 +12,7 @@ def setUp():
     return driver
 
 class MySeleniumTest(LiveServerTestCase):
-        # ... continue com as interações e validações na página web
+        #teste de cadastro n foi feito por não ser diretamente um história
     # def test_cadastrar(self):
     #     browser = setUp()
     #     browser.get('http://127.0.0.1:8000/')
