@@ -1,18 +1,19 @@
 from time import sleep
+
 from django.test import LiveServerTestCase
 from selenium import webdriver
 from selenium.webdriver.chrome.options import Options
 from selenium.webdriver.common.by import By
-from urllib3.util import Timeout
+
 
 #testeagoravai
 def setUp():
-    chrome_options = Options()
-    chrome_options.add_argument('--incognito')
+    chrome_options = webdriver.ChromeOptions()
+    chrome_options.add_argument('--icognito')
     chrome_options.add_argument('--headless')
     driver = webdriver.Chrome(options=chrome_options)
-    driver.implicitly_wait(10)
-
+    driver.maximize_window()
+    
     return driver
 
 class MySeleniumTest(LiveServerTestCase):
