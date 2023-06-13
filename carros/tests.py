@@ -8,9 +8,13 @@ from selenium.webdriver.common.by import By
 
 def setUp():
     chrome_options = webdriver.ChromeOptions()
+    chrome_options.binary_location = 'C:\Program Files\Google\Chrome\Application\chrome.exe'  # Caminho absoluto para o executável do Chrome
     chrome_options.add_argument('--incognito')
     chrome_service_args = ['--silent']
     browser = webdriver.Chrome(options=chrome_options, service_args=chrome_service_args)
+    from selenium import webdriver
+# Resto do código para iniciar o ChromeDriver
+
     browser.maximize_window()
     return browser
 #teste
