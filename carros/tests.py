@@ -23,7 +23,7 @@ def setUp():
 
     timeout = Timeout(connect=10)
 
-    driver = webdriver.Chrome(options=chrome_options, timeout=timeout)
+    driver = webdriver.Chrome(options=chrome_options)
     #driver.maximize_window()
     
     return driver
