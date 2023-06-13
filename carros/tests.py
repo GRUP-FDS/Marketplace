@@ -222,7 +222,7 @@ class MySeleniumTest(LiveServerTestCase):
         sleep(3)
 
         
-        browser.find_element(By.ID, 'criar-anuncio').click()
+        browser.find_element(By.ID, 'criar_anuncio').click()
         sleep(3)
         input_marca = browser.find_element(By.ID,'id_brand')
         input_model = browser.find_element(By.ID,'id_car_model')
