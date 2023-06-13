@@ -7,11 +7,12 @@ from selenium.webdriver.common.by import By
 
 
 def setUp():
-        chrome_options = webdriver.ChromeOptions()
-        chrome_options.add_argument('--icognito') 
-        browser = webdriver.Chrome(options=chrome_options)
-        browser.maximize_window()
-        return browser   
+    chrome_options = webdriver.ChromeOptions()
+    chrome_options.add_argument('--incognito')
+    chrome_service_args = ['--silent']
+    browser = webdriver.Chrome(options=chrome_options, service_args=chrome_service_args)
+    browser.maximize_window()
+    return browser
 #teste
 
 class MySeleniumTest(LiveServerTestCase):
