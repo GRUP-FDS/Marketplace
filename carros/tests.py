@@ -4,31 +4,16 @@ from selenium import webdriver
 from selenium.webdriver.common.by import By
 from time import sleep
 
-# def setUp():
-#     chrome_options = webdriver.ChromeOptions()
-#     chrome_options.binary_location = 'C:\Program Files\Google\Chrome\Application\chrome.exe'  # Caminho absoluto para o executável do Chrome
-#     chrome_options.add_argument('--incognito')
-#     chrome_service_args = ['--silent']
-#     browser = webdriver.Chrome(options=chrome_options, service_args=chrome_service_args)
-#     from selenium import webdriver
-# # Resto do código para iniciar o ChromeDriver
-
-#     browser.maximize_window()
-#     return browser
-# teste
-
 def setUp():
     chrome_options = webdriver.ChromeOptions()
     chrome_options.add_argument('--incognito')
     chrome_options.add_argument('--headless')
     driver = webdriver.Chrome(options=chrome_options)
-
     return driver
 
 class MySeleniumTest(LiveServerTestCase):
         # ... continue com as interações e validações na página web
     def test_cadastrar(self):
-
         browser = setUp()
         browser.get('http://127.0.0.1:8000/')
         browser.find_element(By.ID,'logar').click()
@@ -41,7 +26,6 @@ class MySeleniumTest(LiveServerTestCase):
         input_repassword.send_keys('blackthigas')
         sleep(3)
         browser.find_element(By.ID,'cadastro').click()
-
         botao_sair = browser.find_element(By.ID,'sairlogout')
         assert botao_sair.text == "Sair"
 
@@ -58,12 +42,10 @@ class MySeleniumTest(LiveServerTestCase):
         input_senha.send_keys('bruna123')
         browser.find_element(By.ID,'login-registrar').click()
         sleep(3)
-
         botao_sair = browser.find_element(By.ID,'sairlogout')
         assert botao_sair.text == "Sair"
         #------------------------------------------------------------------------------------------------------------#
     def test_criar_anuncio(self):
-        
         browser = setUp()
         browser.get('http://127.0.0.1:8000/')
         sleep(3)
@@ -123,7 +105,6 @@ class MySeleniumTest(LiveServerTestCase):
         input_filter_model.send_keys('ka')
         browser.find_element(By.ID,'botao_filtrar').click()
         sleep(3)
-
         carro_exemplo = browser.find_element(By.ID,'nome_carro')
         assert carro_exemplo.text == "FORD KA"
  
@@ -140,13 +121,11 @@ class MySeleniumTest(LiveServerTestCase):
         browser.find_element(By.ID,'login-registrar').click()
         browser.find_element(By.ID,'botao-meus-anuncios').click()
         sleep(3)
-
         meus_anuncios = browser.find_element(By.ID,'confirmar_anuncio')
         assert meus_anuncios.text == "Meus anúncios"
     #     #------------------------------------------------------------------------------------------------------------#
 
     def test_chat_online(self):
-
         browser = setUp()
         browser.get('http://127.0.0.1:8000/')
         sleep(3)
@@ -158,7 +137,6 @@ class MySeleniumTest(LiveServerTestCase):
         browser.find_element(By.ID,'login-registrar').click()
         browser.find_element(By.ID,'home').click()
         sleep(3)
-
         input_search = browser.find_element(By.ID,'search')
         input_search.send_keys('ka')
         sleep(3)
@@ -171,8 +149,7 @@ class MySeleniumTest(LiveServerTestCase):
         sleep(2)
         browser.find_element(By.ID,'chat-message-submit').click()
         sleep(3)
-
-    mensagem = browser.find_element(By.ID,'mensagem_exemplo')
+        mensagem = browser.find_element(By.ID,'mensagem_exemplo')
         assert mensagem.text == "Olá, estou interessado no seu carro"
         #------------------------------------------------------------------------------------------------------------#
 
@@ -187,8 +164,7 @@ class MySeleniumTest(LiveServerTestCase):
         input_user.send_keys('BrunaCarvalho')
         input_senha.send_keys('bruna123')
         browser.find_element(By.ID,'login-registrar').click()
-        sleep(3)
-        
+        sleep(3)       
         browser.find_element(By.ID,'criar-anuncios').click()
         sleep(3)
         input_marca = browser.find_element(By.ID,'id_brand')
@@ -201,7 +177,7 @@ class MySeleniumTest(LiveServerTestCase):
         input_color = browser.find_element(By.ID,'id_color')
         input_image = browser.find_element(By.ID, 'id_image')   
         input_descricao = browser.find_element(By.ID,'id_description') 
-       
+
         #preenchendo campos
         input_marca.send_keys('Produto de Teste')
         input_model.send_keys('Este é um produto de teste')
@@ -257,7 +233,7 @@ class MySeleniumTest(LiveServerTestCase):
         input_descricao = browser.find_element(By.ID,'id_description')
         sleep(2) 
       
-         #preenchendo campos
+        #preenchendo campos
         input_marca.send_keys('Produto de Teste')
         input_model.send_keys('Este é um produto de teste')
         input_km.send_keys('10')
@@ -297,7 +273,7 @@ class MySeleniumTest(LiveServerTestCase):
         browser.find_element(By.ID,'botao-meus-anuncios').click()
         browser.find_element(By.ID,'atualizar_my_ads').click() #id do botao "atualizar"
 
-         #atualizando os campos do anuncio
+        #atualizando os campos do anuncio
         input_descricao = browser.find_element(By.ID,'id_description')
         input_descricao.clear()
         input_descricao.send_keys('Atualização do campo de descrição')
